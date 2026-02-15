@@ -1,17 +1,41 @@
 "use client";
 
-import { useActionState } from "react";
-import { sendContactEmail, type ContactFormState } from "@/app/contact/actions";
-
-const initialState: ContactFormState = { success: false, error: null };
+import { useState, type SubmitEvent } from "react";
 
 export default function ContactForm() {
-  const [state, formAction, isPending] = useActionState(
-    sendContactEmail,
-    initialState
-  );
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [isPending, setIsPending] = useState(false);
 
-  if (state.success) {
+  async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsPending(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(
+          formData as unknown as Record<string, string>,
+        ).toString(),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+      } else {
+        setError("Failed to send message. Please try again later.");
+      }
+    } catch {
+      setError("Failed to send message. Please try again later.");
+    } finally {
+      setIsPending(false);
+    }
+  }
+
+  if (success) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center animate-fade-up">
         <div className="w-[52px] h-[52px] rounded-full border-2 border-black flex items-center justify-center text-[22px] mb-5">
@@ -33,7 +57,14 @@ export default function ContactForm() {
         there.
       </p>
 
-      <form action={formAction} className="flex flex-col gap-1.5">
+      <form
+        onSubmit={handleSubmit}
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        className="flex flex-col gap-1.5"
+      >
+        <input type="hidden" name="form-name" value="contact" />
         {[
           { name: "name", placeholder: "Your Name", type: "text" },
           { name: "email", placeholder: "Email Address", type: "email" },
@@ -56,8 +87,8 @@ export default function ContactForm() {
           className="w-full bg-transparent border-0 border-b border-gray-5 py-3.5 mt-1 font-body text-[15px] font-light text-black outline-none focus:border-black transition-colors duration-300 resize-y min-h-[100px] placeholder:text-gray-3"
         />
 
-        {state.error && (
-          <p className="font-body text-sm text-red-600 mt-2">{state.error}</p>
+        {error && (
+          <p className="font-body text-sm text-red-600 mt-2">{error}</p>
         )}
 
         <button
