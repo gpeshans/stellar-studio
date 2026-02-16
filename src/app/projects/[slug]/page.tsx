@@ -16,7 +16,9 @@ export async function generateStaticParams() {
   return PROJECTS.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return {};
@@ -45,12 +47,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       <ProjectMeta project={project} />
 
       {/* Description */}
-      <div className="px-[clamp(20px,5vw,72px)] pb-16 max-w-[780px]">
+      {/* <div className="px-[clamp(20px,5vw,72px)] pb-16 max-w-[780px]">
         <div className="w-10 h-[1.5px] bg-black mb-6" />
         <p className="font-body text-[17px] font-light leading-[1.85] text-gray-2">
           {project.description}
         </p>
-      </div>
+      </div> */}
 
       <ProjectGallery gallery={project.gallery} title={project.title} />
       <NextProjectCTA project={nextProject} />
@@ -69,7 +71,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               { name: "Home", url: "/" },
               { name: "Projects", url: "/projects" },
               { name: project.title, url: `/projects/${project.slug}` },
-            ])
+            ]),
           ),
         }}
       />

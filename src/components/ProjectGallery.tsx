@@ -1,56 +1,70 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 interface ProjectGalleryProps {
   gallery: string[];
   title: string;
 }
 
-export default function ProjectGallery({ gallery, title }: ProjectGalleryProps) {
+export default function ProjectGallery({
+  gallery,
+  title,
+}: ProjectGalleryProps) {
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const galleryImages = gallery.slice(1);
+
+  const slides = galleryImages.map((src, i) => ({
+    src,
+    alt: `${title} - gallery image ${i + 1}`,
+  }));
+
   return (
-    <div className="px-[clamp(20px,5vw,72px)] pb-16 flex flex-col gap-2">
-      {/* Full-width image */}
-      <div className="overflow-hidden relative" style={{ aspectRatio: "21/9" }}>
-        <Image
-          src={gallery[1]}
-          alt={`${title} - gallery image 1`}
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
-
-      {/* Two-column */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
-          <Image
-            src={gallery[2]}
-            alt={`${title} - gallery image 2`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 520px) 100vw, 50vw"
-          />
-        </div>
-        <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
-          <Image
-            src={gallery[3]}
-            alt={`${title} - gallery image 3`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 520px) 100vw, 50vw"
-          />
+    <>
+      <div className="flex flex-col items-center gap-2 pb-16">
+        <div className="w-[90vw] sm:w-[85vw] lg:w-[80vw] flex flex-col gap-2">
+          {galleryImages.map((src, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => {
+                setIndex(i);
+                setOpen(true);
+              }}
+              className="gallery-trigger relative block w-full border-0 p-0 bg-transparent"
+              aria-label={`View ${title} - gallery image ${i + 1} in fullscreen`}
+            >
+              <Image
+                src={src}
+                alt={`${title} - gallery image ${i + 1}`}
+                width={0}
+                height={0}
+                className="w-full h-auto"
+                sizes="50vw"
+              />
+            </button>
+          ))}
         </div>
       </div>
 
-      {/* Full-width closing */}
-      <div className="overflow-hidden relative" style={{ aspectRatio: "16/9" }}>
-        <Image
-          src={gallery[4]}
-          alt={`${title} - gallery image 4`}
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
-    </div>
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={slides}
+        plugins={[Zoom]}
+        on={{ view: ({ index: i }) => setIndex(i) }}
+        animation={{ fade: 300, swipe: 400 }}
+        controller={{ closeOnBackdropClick: true }}
+        carousel={{ imageFit: "contain" }}
+        styles={{ container: { backgroundColor: "rgba(0, 0, 0, 0.92)" } }}
+      />
+    </>
   );
 }

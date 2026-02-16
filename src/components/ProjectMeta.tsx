@@ -15,8 +15,8 @@ const META_FIELDS: { label: string; key: keyof Project }[] = [
 
 export default function ProjectMeta({ project }: ProjectMetaProps) {
   return (
-    <div className="px-[clamp(20px,5vw,72px)] pt-12 pb-8 flex justify-between items-start flex-wrap gap-6">
-      <div className="flex-[1_1_400px]">
+    <div className="px-[clamp(20px,5vw,72px)] pt-12 pb-8">
+      <div>
         <Link
           href="/projects"
           className="font-body text-xs font-normal tracking-[0.08em] uppercase text-gray-3 mb-5 block hover:text-black transition-colors duration-300"
@@ -27,13 +27,13 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
           {project.title}
         </h1>
       </div>
-      <div className="flex gap-10 flex-wrap pt-12">
+      <div className="flex gap-10 flex-wrap justify-center pt-8">
         {META_FIELDS.map((m) => (
           <div key={m.label}>
-            <p className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-gray-3 mb-1">
+            <p className="font-body text-sm font-medium tracking-[0.15em] uppercase text-gray-3 mb-1">
               {m.label}
             </p>
-            <p className="font-body text-sm font-normal text-gray-1">
+            <p className="font-body text-lg font-normal text-gray-1">
               {String(project[m.key])}
             </p>
           </div>

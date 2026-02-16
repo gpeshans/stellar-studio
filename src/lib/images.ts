@@ -18,7 +18,7 @@ export function unsplashLoader({
 
 export const STOCK = {
   // Hero / Featured
-  hero1: unsplash("1487958449943-2429e8be8625", 1920, 1080),
+  hero1: "/images/projects/commercial/brash-fashion-scms/projects-bfscm-001.jpg",
   hero2: unsplash("1545093149-618ce3bcf49d", 1920, 1080),
   hero3: unsplash("1511818966892-d7d671e672a2", 1920, 1080),
   hero4: unsplash("1518005020951-eccb494ad742", 1920, 1080),
@@ -38,8 +38,8 @@ export const STOCK = {
   // Project detail gallery extras
   d1: unsplash("1600573472592-401b489a3cdc", 1600, 900),
   d2: unsplash("1600585154526-990dced4db0d", 1600, 900),
-  d3: unsplash("1600607687644-aac4c3eac7f4", 1600, 900),
-  d4: unsplash("1600566753190-17f0baa2a6c0", 1600, 900),
+  d3: unsplash("1600585154084-4e5fe7c39198", 1600, 900),
+  d4: unsplash("1600566752355-35792bedcfea", 1600, 900),
   d5: unsplash("1496564203457-11bb12075d90", 1600, 900),
 
   // Categories

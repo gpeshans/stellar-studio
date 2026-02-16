@@ -24,16 +24,24 @@ export const CATEGORIES: CategoryItem[] = [
 const RAW_PROJECTS: Omit<Project, "slug">[] = [
   {
     id: 1,
-    title: "Lakeside Pavilion",
-    location: "Ohrid, Macedonia",
-    category: "Residential",
-    year: "2025",
-    area: "480 m²",
+    title: "Brash Fashion",
+    location: "Shtip, Macedonia",
+    category: "Commercial",
+    year: "2022",
+    area: "150 m²",
     client: "Private",
-    img: STOCK.p1,
-    gallery: [STOCK.p1, STOCK.d1, STOCK.d2, STOCK.d5, STOCK.hero1],
+    img: "/images/projects/commercial/brash-fashion-scms/projects-bfscm-001.jpg",
+    gallery: [
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-001.jpg",
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-001.jpg",
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-002.jpg",
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-003.jpg",
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-004.jpg",
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-005.jpg",
+      "/images/projects/commercial/brash-fashion-scms/projects-bfscm-006.jpg",
+    ],
     description:
-      "A serene waterfront residence that blurs the boundary between interior and landscape. Floor-to-ceiling glazing frames panoramic lake views while deep overhangs provide natural shading. The material palette of local stone, white oak, and blackened steel creates a dialogue between tradition and modernity.",
+      "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
   },
   {
     id: 2,

@@ -75,4 +75,7 @@
     outline: 2px solid black;
     outline-offset: 2px;
   }
+
+  .gallery-trigger { cursor: zoom-in; }
+  .yarl__button { filter: none; }
 }

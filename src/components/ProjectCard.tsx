@@ -28,13 +28,13 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end text-white"
         style={{ padding: "clamp(16px, 2.5vw, 36px)", transitionTimingFunction: "var(--ease-smooth)" }}
       >
-        <p className="font-body text-[10px] font-medium tracking-[0.15em] uppercase opacity-50 mb-2">
+        <p className="font-body text-xs font-medium tracking-[0.15em] uppercase opacity-50 mb-2">
           {project.category} — {project.year}
         </p>
-        <h3 className="font-display text-[clamp(16px,2vw,26px)] font-medium tracking-tight mb-1.5">
+        <h3 className="font-display text-[clamp(18px,2.2vw,30px)] font-medium tracking-tight mb-1.5">
           {project.title}
         </h3>
-        <p className="font-body text-[13px] font-light opacity-60">
+        <p className="font-body text-sm font-light opacity-60">
           {project.location}
         </p>
       </div>
