@@ -26,7 +26,7 @@ export const STOCK = {
   // Projects
   p1: unsplash("1600585154340-be6161a56a0c", 1200, 800),
   p2: unsplash("1600607687939-ce8a6c25118c", 1200, 800),
-  p3: unsplash("1486325212027-8a9f06fcc23a", 1200, 800),
+  p3: unsplash("1486718448742-163732cd1544", 1200, 800),
   p4: unsplash("1600566753086-00f18fb6b3ea", 1200, 800),
   p5: unsplash("1618221195710-dd6b41faaea6", 1200, 800),
   p6: unsplash("1506905925346-21bda4d32df4", 1200, 800),
@@ -40,12 +40,12 @@ export const STOCK = {
   d2: unsplash("1600585154526-990dced4db0d", 1600, 900),
   d3: unsplash("1600607687644-aac4c3eac7f4", 1600, 900),
   d4: unsplash("1600566753190-17f0baa2a6c0", 1600, 900),
-  d5: unsplash("1600210491892-ed2b03e2f6e0", 1600, 900),
+  d5: unsplash("1496564203457-11bb12075d90", 1600, 900),
 
   // Categories
   catResidential: unsplash("1600585154340-be6161a56a0c", 800, 1000),
   catCultural: unsplash("1574958269340-fa927503f3dd", 800, 1000),
-  catCommercial: unsplash("1486325212027-8a9f06fcc23a", 800, 1000),
+  catCommercial: unsplash("1486718448742-163732cd1544", 800, 1000),
   catInterior: unsplash("1618221195710-dd6b41faaea6", 800, 1000),
   catPublic: unsplash("1506905925346-21bda4d32df4", 800, 1000),
 
