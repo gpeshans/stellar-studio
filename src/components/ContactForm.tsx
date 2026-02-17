@@ -15,7 +15,7 @@ export default function ContactForm() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(
@@ -61,7 +61,6 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
         name="contact"
         method="POST"
-        data-netlify="true"
         className="flex flex-col gap-1.5"
       >
         <input type="hidden" name="form-name" value="contact" />
