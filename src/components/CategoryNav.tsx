@@ -2,12 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { CATEGORIES, PROJECTS } from "@/lib/data";
 import ProjectGrid from "./ProjectGrid";
 import type { Category } from "@/lib/types";
 
 export default function CategoryNav() {
   const [filter, setFilter] = useState<Category>("All");
+  const t = useTranslations("projects");
+  const tc = useTranslations("categories");
+
   const cats = CATEGORIES.filter((c) => c.key !== "All");
   const hasFilter = filter !== "All";
   const filtered = PROJECTS.filter(
@@ -24,7 +28,7 @@ export default function CategoryNav() {
               onClick={() => setFilter("All")}
               className="bg-transparent border border-gray-5 px-5 py-2 font-body text-xs font-normal tracking-[0.06em] cursor-pointer text-gray-2 hover:border-black hover:text-black transition-all duration-300"
             >
-              &larr; Show All
+              &larr; {t("showAll")}
             </button>
           )}
         </div>
@@ -44,7 +48,7 @@ export default function CategoryNav() {
               >
                 <Image
                   src={cat.img}
-                  alt={cat.label}
+                  alt={tc(cat.key)}
                   fill
                   className="object-cover transition-all duration-500 group-hover:brightness-[0.4] group-hover:grayscale-0 group-hover:scale-[1.04]"
                   style={{
@@ -59,10 +63,10 @@ export default function CategoryNav() {
                 />
                 <div className={`absolute inset-0 flex flex-col justify-end p-[clamp(12px,2vw,24px)] transition-opacity duration-500 ${!active && hasFilter ? "opacity-40" : ""}`}>
                   <p className="font-display text-[clamp(14px,1.6vw,20px)] font-bold text-white tracking-tight">
-                    {cat.label}
+                    {tc(cat.key)}
                   </p>
                   <p className="font-body text-[11px] font-normal text-white/50 mt-1">
-                    {cat.count} project{cat.count !== 1 ? "s" : ""}
+                    {t("projectCount", { count: cat.count })}
                   </p>
                 </div>
               </button>

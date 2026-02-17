@@ -1,15 +1,13 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const PAGE_LINKS = [
-  { label: "Projects", href: "/projects" },
-  { label: "Studio", href: "/studio" },
-  { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
-];
-
+const NAV_KEYS = ["projects", "studio", "services", "contact"] as const;
 const SOCIAL_LINKS = ["Instagram", "LinkedIn", "Facebook", "Pinterest"];
 
 export default function Footer() {
+  const tn = useTranslations("nav");
+  const tf = useTranslations("footer");
+
   return (
     <footer className="border-t border-gray-5 pt-12 pb-8 px-[var(--pad)]">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-12">
@@ -24,23 +22,22 @@ export default function Footer() {
             </p>
           </div>
           <p className="font-body text-sm font-light text-gray-2 leading-[1.7] max-w-[280px]">
-            Architecture studio based in Skopje, Macedonia. Designing spaces
-            that inspire.
+            {tf("tagline")}
           </p>
         </div>
 
         {/* Pages */}
         <div>
           <p className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-gray-3 mb-4">
-            Pages
+            {tf("pages")}
           </p>
-          {PAGE_LINKS.map((link) => (
+          {NAV_KEYS.map((key) => (
             <Link
-              key={link.href}
-              href={link.href}
+              key={key}
+              href={`/${key === "studio" ? "studio" : key}`}
               className="block font-body text-sm font-light text-gray-2 mb-2.5 hover:text-black transition-colors duration-300 cursor-pointer"
             >
-              {link.label}
+              {tn(key)}
             </Link>
           ))}
         </div>
@@ -48,7 +45,7 @@ export default function Footer() {
         {/* Social */}
         <div>
           <p className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-gray-3 mb-4">
-            Social
+            {tf("social")}
           </p>
           {SOCIAL_LINKS.map((name) => (
             <p
@@ -63,27 +60,27 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <p className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-gray-3 mb-4">
-            Contact
+            {tf("contact")}
           </p>
           <p className="font-body text-sm font-light text-gray-2 leading-[1.7]">
-            hello@stellar-arch.com
+            {tf("email")}
             <br />
-            +389 2 XXX XXX
+            {tf("phone")}
             <br />
             <br />
-            ul. Makedonija 12
+            {tf("address")}
             <br />
-            1000 Skopje, Macedonia
+            {tf("city")}
           </p>
         </div>
       </div>
 
       <div className="flex justify-between pt-5 border-t border-gray-5 flex-wrap gap-2">
         <p className="font-body text-xs font-light text-gray-3">
-          &copy; 2025 Stellar Architecture Studio
+          {tf("copyright")}
         </p>
         <p className="font-body text-xs font-light text-gray-3">
-          Privacy &middot; Terms
+          {tf("legal")}
         </p>
       </div>
     </footer>

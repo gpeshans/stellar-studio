@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { PROJECTS } from "@/lib/data";
 import { STOCK } from "@/lib/images";
 import { padIndex } from "@/lib/utils";
@@ -16,6 +17,8 @@ const HEROES = [
 
 export default function Hero() {
   const [idx, setIdx] = useState(0);
+  const tc = useTranslations("common");
+  const tp = useTranslations("data.projects");
 
   const advance = useCallback(() => {
     setIdx((i) => (i + 1) % HEROES.length);
@@ -27,30 +30,34 @@ export default function Hero() {
   }, [advance]);
 
   const { project } = HEROES[idx];
+  const projectIdx = PROJECTS.indexOf(project);
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
       {/* Slides */}
-      {HEROES.map((h, i) => (
-        <div
-          key={i}
-          className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
-          style={{ opacity: i === idx ? 1 : 0 }}
-        >
-          <Image
-            src={h.img}
-            alt={h.project.title}
-            fill
-            className="object-cover brightness-[0.65]"
-            style={{
-              animation: i === idx ? "hero-slow 10s ease-out forwards" : "none",
-            }}
-            sizes="100vw"
-            priority={i === 0}
-            loading={i === 0 ? undefined : "eager"}
-          />
-        </div>
-      ))}
+      {HEROES.map((h, i) => {
+        const hIdx = PROJECTS.indexOf(h.project);
+        return (
+          <div
+            key={i}
+            className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
+            style={{ opacity: i === idx ? 1 : 0 }}
+          >
+            <Image
+              src={h.img}
+              alt={tp(`${hIdx}.title`)}
+              fill
+              className="object-cover brightness-[0.65]"
+              style={{
+                animation: i === idx ? "hero-slow 10s ease-out forwards" : "none",
+              }}
+              sizes="100vw"
+              priority={i === 0}
+              loading={i === 0 ? undefined : "eager"}
+            />
+          </div>
+        );
+      })}
 
       {/* Content */}
       <div className="absolute text-white" style={{ bottom: "clamp(48px, 10vh, 140px)", left: "var(--pad)", right: "var(--pad)" }}>
@@ -61,14 +68,14 @@ export default function Hero() {
           key={idx}
           className="font-display text-[clamp(28px,5vw,60px)] font-medium leading-none tracking-tight max-w-[750px] animate-fade-up"
         >
-          {project.title}
+          {tp(`${projectIdx}.title`)}
         </h1>
         <p
           key={`${idx}-loc`}
           className="font-body text-sm font-light tracking-[0.03em] opacity-50 mt-3.5 mb-9 animate-fade-up"
           style={{ animationDelay: "0.08s" }}
         >
-          {project.location} — {project.category}
+          {tp(`${projectIdx}.location`)} — {tp(`${projectIdx}.category`)}
         </p>
 
         <div className="flex items-center gap-8">
@@ -76,27 +83,30 @@ export default function Hero() {
             href={`/projects/${project.slug}`}
             className="bg-white text-black px-10 py-[15px] font-body text-[12px] leading-normal font-medium tracking-[0.1em] uppercase hover:bg-gray-5 transition-colors duration-300 cursor-pointer"
           >
-            View Project
+            {tc("viewProject")}
           </Link>
 
           {/* Dots */}
-          <div className="flex gap-2" role="tablist" aria-label="Hero slides">
-            {HEROES.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setIdx(i)}
-                className="h-[3px] border-none cursor-pointer rounded-sm transition-all duration-500"
-                style={{
-                  width: i === idx ? 28 : 8,
-                  background:
-                    i === idx ? "white" : "rgba(255,255,255,0.3)",
-                  transitionTimingFunction: "var(--ease-smooth)",
-                }}
-                role="tab"
-                aria-selected={i === idx}
-                aria-label={`Slide ${i + 1}: ${HEROES[i].project.title}`}
-              />
-            ))}
+          <div className="flex gap-2" role="tablist" aria-label={tc("heroSlides")}>
+            {HEROES.map((_, i) => {
+              const dotIdx = PROJECTS.indexOf(HEROES[i].project);
+              return (
+                <button
+                  key={i}
+                  onClick={() => setIdx(i)}
+                  className="h-[3px] border-none cursor-pointer rounded-sm transition-all duration-500"
+                  style={{
+                    width: i === idx ? 28 : 8,
+                    background:
+                      i === idx ? "white" : "rgba(255,255,255,0.3)",
+                    transitionTimingFunction: "var(--ease-smooth)",
+                  }}
+                  role="tab"
+                  aria-selected={i === idx}
+                  aria-label={tc("slide", { num: i + 1, title: tp(`${dotIdx}.title`) })}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

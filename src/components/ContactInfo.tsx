@@ -1,19 +1,24 @@
-const INFO_BLOCKS = [
-  {
-    label: "Office",
-    lines: [
-      "Stellar Architecture Studio",
-      "ul. Makedonija 12",
-      "1000 Skopje, Macedonia",
-    ],
-  },
-  { label: "Email", lines: ["hello@stellar-arch.com"] },
-  { label: "Phone", lines: ["+389 2 XXX XXX"] },
-];
+import { useTranslations } from "next-intl";
 
 const SOCIAL = ["Instagram", "LinkedIn", "Facebook"];
 
 export default function ContactInfo() {
+  const t = useTranslations("contact");
+  const tf = useTranslations("footer");
+
+  const INFO_BLOCKS = [
+    {
+      label: t("office"),
+      lines: [
+        "Stellar Architecture Studio",
+        tf("address"),
+        tf("city"),
+      ],
+    },
+    { label: t("email"), lines: [tf("email")] },
+    { label: t("phone"), lines: [tf("phone")] },
+  ];
+
   return (
     <div>
       {INFO_BLOCKS.map((block, i) => (
@@ -34,7 +39,7 @@ export default function ContactInfo() {
 
       <div className="mb-9">
         <p className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-gray-3 mb-2.5">
-          Follow
+          {t("follow")}
         </p>
         <div className="flex gap-5">
           {SOCIAL.map((name) => (
@@ -53,7 +58,7 @@ export default function ContactInfo() {
         style={{ aspectRatio: "16/9" }}
       >
         <span className="font-body text-xs font-normal text-gray-3 tracking-[0.1em] uppercase">
-          Map &middot; Skopje, Macedonia
+          {t("mapPlaceholder")}
         </span>
       </div>
     </div>

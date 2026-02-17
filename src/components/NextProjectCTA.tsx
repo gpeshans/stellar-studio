@@ -1,12 +1,18 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { Project } from "@/lib/types";
+import { PROJECTS } from "@/lib/data";
 
 interface NextProjectCTAProps {
   project: Project;
 }
 
 export default function NextProjectCTA({ project }: NextProjectCTAProps) {
+  const t = useTranslations("project");
+  const tp = useTranslations("data.projects");
+  const idx = PROJECTS.indexOf(project);
+
   return (
     <Link
       href={`/projects/${project.slug}`}
@@ -14,7 +20,7 @@ export default function NextProjectCTA({ project }: NextProjectCTAProps) {
     >
       <Image
         src={project.img}
-        alt={project.title}
+        alt={tp(`${idx}.title`)}
         fill
         className="object-cover brightness-50 transition-transform duration-700 group-hover:scale-[1.03]"
         style={{ transitionTimingFunction: "var(--ease-smooth)" }}
@@ -22,13 +28,13 @@ export default function NextProjectCTA({ project }: NextProjectCTAProps) {
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
         <p className="font-body text-[11px] font-medium tracking-[0.2em] uppercase opacity-40 mb-4">
-          Next Project
+          {t("nextProject")}
         </p>
         <h2 className="font-display text-[clamp(28px,5vw,52px)] font-medium tracking-tight">
-          {project.title}
+          {tp(`${idx}.title`)}
         </h2>
         <p className="font-body text-sm font-light opacity-50 mt-2">
-          {project.location}
+          {tp(`${idx}.location`)}
         </p>
       </div>
     </Link>

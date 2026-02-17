@@ -1,10 +1,13 @@
+import { useTranslations } from "next-intl";
 import { SERVICES } from "@/lib/data";
 import { padIndex } from "@/lib/utils";
 
 export default function ServicePreviewGrid() {
+  const t = useTranslations("data.services");
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-5 border border-gray-5 mx-[var(--pad)] mb-20">
-      {SERVICES.slice(0, 3).map((s, i) => (
+      {SERVICES.slice(0, 3).map((_, i) => (
         <div
           key={i}
           className="bg-white hover:bg-bg2 transition-colors duration-400"
@@ -14,10 +17,10 @@ export default function ServicePreviewGrid() {
             {padIndex(i)}
           </span>
           <h3 className="font-display text-lg font-semibold mb-2.5 tracking-tight">
-            {s.title}
+            {t(`${i}.title`)}
           </h3>
           <p className="font-body text-sm font-light leading-[1.7] text-gray-2">
-            {s.desc}
+            {t(`${i}.desc`)}
           </p>
         </div>
       ))}

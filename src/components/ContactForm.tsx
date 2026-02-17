@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, type SubmitEvent } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isPending, setIsPending] = useState(false);
+  const t = useTranslations("contact");
+  const tc = useTranslations("common");
 
   async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,10 +29,10 @@ export default function ContactForm() {
       if (response.ok) {
         setSuccess(true);
       } else {
-        setError("Failed to send message. Please try again later.");
+        setError(t("errorMessage"));
       }
     } catch {
-      setError("Failed to send message. Please try again later.");
+      setError(t("errorMessage"));
     } finally {
       setIsPending(false);
     }
@@ -41,9 +44,9 @@ export default function ContactForm() {
         <div className="w-[52px] h-[52px] rounded-full border-2 border-black flex items-center justify-center text-[22px] mb-5">
           &#10003;
         </div>
-        <h3 className="font-display text-2xl font-bold mb-2">Message Sent</h3>
+        <h3 className="font-display text-2xl font-bold mb-2">{t("successTitle")}</h3>
         <p className="font-body text-[15px] font-light text-gray-2">
-          We&apos;ll respond within 48 hours.
+          {t("successMessage")}
         </p>
       </div>
     );
@@ -52,9 +55,7 @@ export default function ContactForm() {
   return (
     <div>
       <p className="font-body text-[15px] font-light leading-[1.75] text-gray-2 mb-10">
-        Whether you&apos;re planning a new build, a renovation, or just
-        exploring ideas — tell us about your vision and we&apos;ll take it from
-        there.
+        {t("formIntro")}
       </p>
 
       <form
@@ -64,9 +65,9 @@ export default function ContactForm() {
       >
         <input type="hidden" name="form-name" value="contact" />
         {[
-          { name: "name", placeholder: "Your Name", type: "text" },
-          { name: "email", placeholder: "Email Address", type: "email" },
-          { name: "subject", placeholder: "Subject", type: "text" },
+          { name: "name", placeholder: t("nameLabel"), type: "text" },
+          { name: "email", placeholder: t("emailLabel"), type: "email" },
+          { name: "subject", placeholder: t("subjectLabel"), type: "text" },
         ].map((field) => (
           <input
             key={field.name}
@@ -79,7 +80,7 @@ export default function ContactForm() {
         ))}
         <textarea
           name="message"
-          placeholder="Tell us about your project..."
+          placeholder={t("messageLabel")}
           rows={5}
           required
           className="w-full bg-transparent border-0 border-b border-gray-5 py-3.5 mt-1 font-body text-[15px] font-light text-black outline-none focus:border-black transition-colors duration-300 resize-y min-h-[100px] placeholder:text-gray-3"
@@ -94,7 +95,7 @@ export default function ContactForm() {
           disabled={isPending}
           className="mt-7 self-start bg-black text-white border-none px-12 py-[15px] font-body text-xs font-medium tracking-[0.1em] uppercase cursor-pointer hover:bg-gray-1 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isPending ? "Sending..." : "Send Message"}
+          {isPending ? tc("sending") : tc("sendMessage")}
         </button>
       </form>
     </div>

@@ -3,12 +3,13 @@ import type { Project } from "./types";
 const SITE_URL = "https://stellar-arch.com";
 const SITE_NAME = "Stellar Architecture Studio";
 
-export function organizationJsonLd() {
+export function organizationJsonLd(locale?: string) {
+  const url = locale ? `${SITE_URL}/${locale}` : SITE_URL;
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_NAME,
-    url: SITE_URL,
+    url,
     logo: `${SITE_URL}/og-default.jpg`,
     description:
       "Architecture and interior design studio based in Skopje, Macedonia.",
@@ -61,6 +62,7 @@ export function localBusinessJsonLd() {
 }
 
 export function breadcrumbJsonLd(
+  locale: string,
   items: { name: string; url: string }[]
 ) {
   return {
@@ -70,18 +72,19 @@ export function breadcrumbJsonLd(
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: `${SITE_URL}${item.url}`,
+      item: `${SITE_URL}/${locale}${item.url}`,
     })),
   };
 }
 
-export function projectJsonLd(project: Project) {
+export function projectJsonLd(project: Project, locale: string, translatedDescription?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: project.title,
-    description: project.description,
+    description: translatedDescription || project.description,
     image: project.img,
+    url: `${SITE_URL}/${locale}/projects/${project.slug}`,
     creator: {
       "@type": "Organization",
       name: SITE_NAME,

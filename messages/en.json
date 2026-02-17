@@ -1,0 +1,242 @@
+{
+  "common": {
+    "brand": "stellar",
+    "brandSub": "Architecture",
+    "viewProject": "View Project",
+    "allProjects": "All Projects",
+    "theStudio": "The Studio",
+    "getInTouch": "Get in Touch",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "backToHome": "Back to Home",
+    "skipToMain": "Skip to main content",
+    "heroSlides": "Hero slides",
+    "slide": "Slide {num}: {title}"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "studio": "Studio",
+    "services": "Services",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "footer": {
+    "pages": "Pages",
+    "social": "Social",
+    "contact": "Contact",
+    "tagline": "Architecture studio based in Skopje, Macedonia. Designing spaces that inspire.",
+    "address": "ul. Makedonija 12",
+    "city": "1000 Skopje, Macedonia",
+    "email": "hello@stellar-arch.com",
+    "phone": "+389 2 XXX XXX",
+    "copyright": "\u00a9 2025 Stellar Architecture Studio",
+    "legal": "Privacy \u00b7 Terms"
+  },
+  "home": {
+    "selectedWork": "Selected Work",
+    "recentProjects": "Recent Projects",
+    "recentProjectsSub": "A curated selection of our latest residential, cultural, and commercial work.",
+    "expertise": "Expertise",
+    "services": "Services"
+  },
+  "about": {
+    "label": "About Us",
+    "heading": "Architecture should serve the people who inhabit it",
+    "paragraph": "Founded in Skopje, Stellar is a multidisciplinary studio driven by a commitment to thoughtful design, material honesty, and lasting relationships with our clients and communities.",
+    "button": "The Studio"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "All Projects",
+    "sub": "Browse our complete body of work by category.",
+    "showAll": "Show All",
+    "projectCount": "{count, plural, one {# project} other {# projects}}"
+  },
+  "project": {
+    "allProjects": "\u2190 All Projects",
+    "nextProject": "Next Project",
+    "location": "Location",
+    "year": "Year",
+    "area": "Area",
+    "category": "Category",
+    "client": "Client"
+  },
+  "services": {
+    "label": "Expertise",
+    "title": "What We Do",
+    "sub": "End-to-end architectural services, from concept to handover.",
+    "ctaHeading": "Have a project in mind?",
+    "ctaSub": "We'd love to hear about it.",
+    "ctaButton": "Get in Touch"
+  },
+  "studio": {
+    "label": "About",
+    "title": "The Studio",
+    "tagline": "Great architecture is born from listening \u2014 to the site, to the light, and above all, to the people.",
+    "paragraph1": "Stellar was founded with a simple conviction: every project, regardless of scale, deserves the same depth of thought and care. From private residences to public institutions, we approach each commission as an opportunity to create spaces that elevate everyday life.",
+    "paragraph2": "Our studio combines rigorous technical expertise with a deep sensitivity to context, materiality, and human experience. We work collaboratively with clients, engineers, and craftspeople to realize designs that are both ambitious and enduring.",
+    "teamLabel": "People",
+    "teamTitle": "Our Team"
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title": "Contact",
+    "formIntro": "Whether you're planning a new build, a renovation, or just exploring ideas \u2014 tell us about your vision and we'll take it from there.",
+    "nameLabel": "Your Name",
+    "emailLabel": "Email Address",
+    "subjectLabel": "Subject",
+    "messageLabel": "Tell us about your project...",
+    "successTitle": "Message Sent",
+    "successMessage": "We'll respond within 48 hours.",
+    "errorMessage": "Failed to send message. Please try again later.",
+    "office": "Office",
+    "email": "Email",
+    "phone": "Phone",
+    "follow": "Follow",
+    "mapPlaceholder": "Map \u00b7 Skopje, Macedonia"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "button": "Back to Home"
+  },
+  "marquee": {
+    "text": "STELLAR \u2014 ARCHITECTURE \u2014 DESIGN \u2014 SPACE \u2014 FORM \u2014 LIGHT \u2014 "
+  },
+  "categories": {
+    "All": "All Projects",
+    "Residential": "Residential",
+    "Cultural": "Cultural",
+    "Commercial": "Commercial",
+    "Interior": "Interior",
+    "Public": "Public"
+  },
+  "stats": {
+    "stat0": "Projects",
+    "stat1": "Years",
+    "stat2": "Team Members",
+    "stat3": "Countries"
+  },
+  "metadata": {
+    "defaultTitle": "Stellar Architecture Studio \u2014 Skopje, Macedonia",
+    "titleTemplate": "{title} | Stellar Architecture Studio",
+    "description": "Architecture and interior design studio based in Skopje, Macedonia. Residential, commercial, and cultural projects designed with meticulous attention to context, materiality, and light.",
+    "projectsTitle": "Projects",
+    "projectsDesc": "Browse our complete portfolio of architectural projects \u2014 residential, commercial, cultural, interior, and public spaces across Macedonia.",
+    "servicesTitle": "Services",
+    "servicesDesc": "End-to-end architectural services from Stellar Architecture Studio \u2014 architecture, interior design, urban planning, renovation, landscape, and consultation.",
+    "studioTitle": "Studio",
+    "studioDesc": "Learn about Stellar Architecture Studio \u2014 a multidisciplinary design practice founded in Skopje, Macedonia. Meet our team of architects and designers.",
+    "contactTitle": "Contact",
+    "contactDesc": "Get in touch with Stellar Architecture Studio. Located at ul. Makedonija 12, 1000 Skopje, Macedonia. We'd love to hear about your project."
+  },
+  "data": {
+    "projects": {
+      "0": {
+        "title": "Brash Fashion",
+        "description": "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
+        "location": "Shtip, Macedonia",
+        "category": "Commercial",
+        "client": "Private"
+      },
+      "1": {
+        "title": "Mosaic Arts Center",
+        "description": "An undulating roofline of perforated copper panels creates ever-changing light patterns across the gallery floors. The building is organized around a central atrium that serves as both circulation spine and exhibition space, encouraging spontaneous encounters between visitors and art.",
+        "location": "Skopje, Macedonia",
+        "category": "Cultural",
+        "client": "Municipality of Skopje"
+      },
+      "2": {
+        "title": "Vertex Tower",
+        "description": "A 16-story commercial tower with a distinctive twisted geometry that optimizes daylight penetration and reduces wind load. The fa\u00e7ade system of ceramic louvers responds to solar orientation, creating a dynamic skin that shifts in appearance throughout the day.",
+        "location": "Skopje, Macedonia",
+        "category": "Commercial",
+        "client": "Vertex Group"
+      },
+      "3": {
+        "title": "Stone Garden Villa",
+        "description": "Nestled into a hillside, this residence is composed of three interlocking stone volumes connected by glass bridges. Each volume frames a specific landscape view \u2014 the mountain, the garden, and the sky \u2014 creating a sequence of curated natural experiences.",
+        "location": "Bitola, Macedonia",
+        "category": "Residential",
+        "client": "Private"
+      },
+      "4": {
+        "title": "The Workshop",
+        "description": "A former textile warehouse transformed into a co-working space that celebrates its industrial heritage. Exposed brick walls and steel trusses contrast with refined insertions of white oak and brass. A double-height library anchors the social heart of the space.",
+        "location": "Tetovo, Macedonia",
+        "category": "Interior",
+        "client": "CreativeLab"
+      },
+      "5": {
+        "title": "Riverbank Promenade",
+        "description": "A 1.2km urban intervention that reconnects the city with its river. Stepped terraces of local travertine descend to the waterline, creating flexible social spaces that accommodate everything from morning joggers to evening concerts.",
+        "location": "Skopje, Macedonia",
+        "category": "Public",
+        "client": "City of Skopje"
+      },
+      "6": {
+        "title": "Horizon House",
+        "description": "A mountain retreat designed as a single horizontal gesture in the landscape. The elongated plan maximizes views across the valley while a green roof seamlessly merges the building with the alpine meadow above. Rammed earth walls provide thermal mass and a connection to the terrain.",
+        "location": "Mavrovo, Macedonia",
+        "category": "Residential",
+        "client": "Private"
+      },
+      "7": {
+        "title": "Gallery M",
+        "description": "A private art gallery conceived as a sequence of rooms with precisely calibrated proportions and light conditions. Each gallery is tailored to a specific medium \u2014 painting, sculpture, photography \u2014 while a rooftop terrace offers views across the old bazaar.",
+        "location": "Skopje, Macedonia",
+        "category": "Cultural",
+        "client": "Foundation M"
+      },
+      "8": {
+        "title": "Cedar Office Park",
+        "description": "Three low-rise office buildings organized around a shared courtyard garden. The complex prioritizes biophilic design with planted fa\u00e7ades, natural ventilation, and daylit interiors. An underground parking structure preserves the green campus above.",
+        "location": "Skopje, Macedonia",
+        "category": "Commercial",
+        "client": "Cedar Investments"
+      },
+      "9": {
+        "title": "Loft Residence",
+        "description": "A penthouse apartment where raw concrete ceilings and polished terrazzo floors create a refined industrial canvas. Custom walnut joinery defines living zones without partitions. A sculptural steel staircase connects to a private rooftop garden.",
+        "location": "Skopje, Macedonia",
+        "category": "Interior",
+        "client": "Private"
+      }
+    },
+    "services": {
+      "0": {
+        "title": "Architecture",
+        "desc": "From concept to completion \u2014 residential, commercial, and public buildings designed with meticulous attention to context, materiality, and light."
+      },
+      "1": {
+        "title": "Interior Design",
+        "desc": "Spatial experiences that balance function and atmosphere. We craft interiors that feel both inevitable and surprising."
+      },
+      "2": {
+        "title": "Urban Planning",
+        "desc": "Masterplans and urban interventions that create vibrant, walkable neighborhoods and reclaim underused public spaces."
+      },
+      "3": {
+        "title": "Renovation",
+        "desc": "Sensitive transformations of existing structures that honor their history while meeting contemporary needs."
+      },
+      "4": {
+        "title": "Landscape",
+        "desc": "Outdoor spaces designed as extensions of architecture \u2014 gardens, courtyards, and public landscapes that evolve with the seasons."
+      },
+      "5": {
+        "title": "Consultation",
+        "desc": "Expert guidance on feasibility, regulations, materials, and sustainability for projects at any stage of development."
+      }
+    },
+    "team": {
+      "0": { "role": "Founding Partner" },
+      "1": { "role": "Design Director" },
+      "2": { "role": "Lead Architect" },
+      "3": { "role": "Project Manager" }
+    }
+  }
+}

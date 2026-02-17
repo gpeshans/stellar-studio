@@ -1,6 +1,8 @@
-const TEXT = "STELLAR \u2014 ARCHITECTURE \u2014 DESIGN \u2014 SPACE \u2014 FORM \u2014 LIGHT \u2014 ";
+import { useTranslations } from "next-intl";
 
 export default function Marquee() {
+  const t = useTranslations("marquee");
+
   return (
     <div
       className="overflow-hidden py-9 border-t border-b border-gray-5 bg-white"
@@ -12,7 +14,7 @@ export default function Marquee() {
             key={i}
             className="font-display text-[clamp(24px,4vw,48px)] font-bold text-gray-5 tracking-[0.04em]"
           >
-            {TEXT}
+            {t("text")}
           </span>
         ))}
       </div>

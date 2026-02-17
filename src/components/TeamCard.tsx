@@ -3,10 +3,11 @@ import type { TeamMember } from "@/lib/types";
 
 interface TeamCardProps {
   member: TeamMember;
+  role: string;
   index: number;
 }
 
-export default function TeamCard({ member, index }: TeamCardProps) {
+export default function TeamCard({ member, role, index }: TeamCardProps) {
   return (
     <div
       className="animate-fade-up"
@@ -26,7 +27,7 @@ export default function TeamCard({ member, index }: TeamCardProps) {
         {member.name}
       </h3>
       <p className="font-body text-[13px] font-light text-gray-3">
-        {member.role}
+        {role}
       </p>
     </div>
   );

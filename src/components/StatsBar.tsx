@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import { STATS } from "@/lib/data";
 
 export default function StatsBar() {
+  const t = useTranslations("stats");
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 border-t border-b border-gray-5">
       {STATS.map((s, i) => (
@@ -15,7 +18,7 @@ export default function StatsBar() {
             {s.number}
           </p>
           <p className="font-body text-xs font-normal tracking-[0.08em] uppercase text-gray-3">
-            {s.label}
+            {t(`stat${i}`)}
           </p>
         </div>
       ))}

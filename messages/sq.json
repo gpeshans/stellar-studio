@@ -1,0 +1,242 @@
+{
+  "common": {
+    "brand": "stellar",
+    "brandSub": "Arkitektur\u00eb",
+    "viewProject": "Shiko Projektin",
+    "allProjects": "T\u00eb Gjitha Projektet",
+    "theStudio": "Studio",
+    "getInTouch": "Na Kontaktoni",
+    "sendMessage": "D\u00ebrgo Mesazhin",
+    "sending": "Duke d\u00ebrguar...",
+    "backToHome": "Kthehu n\u00eb faqen kryesore",
+    "skipToMain": "Kalo te p\u00ebrmbajtja kryesore",
+    "heroSlides": "Sl ajdet",
+    "slide": "Slajdi {num}: {title}"
+  },
+  "nav": {
+    "home": "Kryefaqja",
+    "projects": "Projektet",
+    "studio": "Studio",
+    "services": "Sh\u00ebrbimet",
+    "contact": "Kontakti",
+    "menu": "Menyja",
+    "close": "Mbyll"
+  },
+  "footer": {
+    "pages": "Faqet",
+    "social": "Sociale",
+    "contact": "Kontakti",
+    "tagline": "Studio arkitekture me seli n\u00eb Shkup, Maqedoni. Dizajnojm\u00eb hap\u00ebsira q\u00eb frym\u00ebzojn\u00eb.",
+    "address": "rr. Maqedonia 12",
+    "city": "1000 Shkup, Maqedoni",
+    "email": "hello@stellar-arch.com",
+    "phone": "+389 2 XXX XXX",
+    "copyright": "\u00a9 2025 Stellar Architecture Studio",
+    "legal": "Privat\u00ebsia \u00b7 Kushtet"
+  },
+  "home": {
+    "selectedWork": "Pun\u00eb t\u00eb Zgjedhura",
+    "recentProjects": "Projektet e Fundit",
+    "recentProjectsSub": "Nj\u00eb p\u00ebrzgjedhje e punimeve tona m\u00eb t\u00eb reja rezidenciale, kulturore dhe komerciale.",
+    "expertise": "Ekspertiz\u00eb",
+    "services": "Sh\u00ebrbimet"
+  },
+  "about": {
+    "label": "Rreth Nesh",
+    "heading": "Arkitektura duhet t'u sh\u00ebrbej\u00eb njer\u00ebzve q\u00eb jetojn\u00eb n\u00eb t\u00eb",
+    "paragraph": "E themeluar n\u00eb Shkup, Stellar \u00ebsht\u00eb nj\u00eb studio multidisiplinare e udh\u00ebhequr nga p\u00ebrkushtimi ndaj dizajnit t\u00eb menduar, sinqeritetit material dhe marr\u00ebdh\u00ebnieve t\u00eb q\u00ebndrueshme me klient\u00ebt dhe komunitetet tona.",
+    "button": "Studio"
+  },
+  "projects": {
+    "label": "Portofoli",
+    "title": "T\u00eb Gjitha Projektet",
+    "sub": "Shfletoni t\u00eb gjitha punimet tona sipas kategoris\u00eb.",
+    "showAll": "Shfaq t\u00eb Gjitha",
+    "projectCount": "{count, plural, one {# projekt} other {# projekte}}"
+  },
+  "project": {
+    "allProjects": "\u2190 T\u00eb Gjitha Projektet",
+    "nextProject": "Projekti Tjet\u00ebr",
+    "location": "Vendndodhja",
+    "year": "Viti",
+    "area": "Sip\u00ebrfaqja",
+    "category": "Kategoria",
+    "client": "Klienti"
+  },
+  "services": {
+    "label": "Ekspertiz\u00eb",
+    "title": "\u00c7far\u00eb B\u00ebjm\u00eb",
+    "sub": "Sh\u00ebrbime arkitekturore t\u00eb plota, nga koncepti deri n\u00eb dor\u00ebzim.",
+    "ctaHeading": "Keni nj\u00eb projekt n\u00eb mendje?",
+    "ctaSub": "Do t\u00eb d\u00ebshironim t\u00eb d\u00ebgjonim p\u00ebr t\u00eb.",
+    "ctaButton": "Na Kontaktoni"
+  },
+  "studio": {
+    "label": "Rreth Nesh",
+    "title": "Studio",
+    "tagline": "Arkitektura e madhe lind nga d\u00ebgjimi \u2014 i vendndodhjes, i drit\u00ebs, dhe mbi t\u00eb gjitha, i njer\u00ebzve.",
+    "paragraph1": "Stellar u themelua me nj\u00eb bindje t\u00eb thjesht\u00eb: \u00e7do projekt, pavar\u00ebsisht shkall\u00ebs, meriton t\u00eb nj\u00ebjt\u00ebn thell\u00ebsi mendimi dhe kujdesi. Nga rezidenca private deri te institucionet publike, ne i qasemi \u00e7do porosie si nj\u00eb mund\u00ebsi p\u00ebr t\u00eb krijuar hap\u00ebsira q\u00eb e ngritin jet\u00ebn e p\u00ebrditshme.",
+    "paragraph2": "Studio jon\u00eb kombinon ekspertiz\u00ebn teknike rigoroze me nj\u00eb nd\u00ebshm\u00ebri t\u00eb thell\u00eb ndaj kontekstit, materialitetit dhe p\u00ebrvojimit njer\u00ebzor. Ne punojm\u00eb n\u00eb bashk\u00ebpunim me klient\u00ebt, inxhinier\u00ebt dhe zejtar\u00ebt p\u00ebr t\u00eb realizuar dizajne q\u00eb jan\u00eb ambicioze dhe t\u00eb q\u00ebndrueshme.",
+    "teamLabel": "Njer\u00ebzit",
+    "teamTitle": "Ekipi Yn\u00eb"
+  },
+  "contact": {
+    "label": "Na Kontaktoni",
+    "title": "Kontakti",
+    "formIntro": "Pavar\u00ebsisht n\u00ebse po planifikoni nj\u00eb nd\u00ebrtim t\u00eb ri, nj\u00eb rinovim, ose thjesht po eksploroni ide \u2014 na tregoni p\u00ebr vizionin tuaj dhe ne do ta marrim prej aty.",
+    "nameLabel": "Emri Juaj",
+    "emailLabel": "Adresa e Emailit",
+    "subjectLabel": "Subjekti",
+    "messageLabel": "Na tregoni p\u00ebr projektin tuaj...",
+    "successTitle": "Mesazhi u D\u00ebrgua",
+    "successMessage": "Do t\u00eb p\u00ebrgjigjemi brenda 48 or\u00ebve.",
+    "errorMessage": "D\u00ebshtoi d\u00ebrgimi i mesazhit. Provoni p\u00ebrs\u00ebri m\u00eb von\u00eb.",
+    "office": "Zyra",
+    "email": "Emaili",
+    "phone": "Telefoni",
+    "follow": "Na Ndiqni",
+    "mapPlaceholder": "Harta \u00b7 Shkup, Maqedoni"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Faqja Nuk u Gjet",
+    "description": "Faqja q\u00eb po k\u00ebrkoni nuk ekziston ose \u00ebsht\u00eb zhvendosur.",
+    "button": "Kthehu n\u00eb faqen kryesore"
+  },
+  "marquee": {
+    "text": "STELLAR \u2014 ARKITEKTUR\u00cb \u2014 DIZAJN \u2014 HAP\u00cbSIR\u00cb \u2014 FORM\u00cb \u2014 DRIT\u00cb \u2014 "
+  },
+  "categories": {
+    "All": "T\u00eb Gjitha Projektet",
+    "Residential": "Rezidenciale",
+    "Cultural": "Kulturore",
+    "Commercial": "Komerciale",
+    "Interior": "Enterier",
+    "Public": "Publike"
+  },
+  "stats": {
+    "stat0": "Projekte",
+    "stat1": "Vite",
+    "stat2": "An\u00ebtar\u00eb Ekipi",
+    "stat3": "Vende"
+  },
+  "metadata": {
+    "defaultTitle": "Stellar Architecture Studio \u2014 Shkup, Maqedoni",
+    "titleTemplate": "{title} | Stellar Architecture Studio",
+    "description": "Studio arkitekture dhe dizajni enterieri me seli n\u00eb Shkup, Maqedoni. Projekte rezidenciale, komerciale dhe kulturore t\u00eb dizajnuara me v\u00ebmendje ndaj kontekstit, materialitetit dhe drit\u00ebs.",
+    "projectsTitle": "Projektet",
+    "projectsDesc": "Shfletoni portofolin ton\u00eb t\u00eb plot\u00eb t\u00eb projekteve arkitekturore \u2014 hap\u00ebsira rezidenciale, komerciale, kulturore, enterieri dhe publike n\u00eb Maqedoni.",
+    "servicesTitle": "Sh\u00ebrbimet",
+    "servicesDesc": "Sh\u00ebrbime arkitekturore t\u00eb plota nga Stellar Architecture Studio \u2014 arkitektur\u00eb, dizajn enterieri, urbanizm\u00eb, rinovim, peizazh dhe konsulenc\u00eb.",
+    "studioTitle": "Studio",
+    "studioDesc": "M\u00ebsoni m\u00eb shum\u00eb p\u00ebr Stellar Architecture Studio \u2014 nj\u00eb praktik\u00eb dizajni multidisiplinare e themeluar n\u00eb Shkup, Maqedoni. Njihuni me ekipin ton\u00eb.",
+    "contactTitle": "Kontakti",
+    "contactDesc": "Kontaktoni Stellar Architecture Studio. T\u00eb vendosur n\u00eb rr. Maqedonia 12, 1000 Shkup, Maqedoni."
+  },
+  "data": {
+    "projects": {
+      "0": {
+        "title": "Brash Fashion",
+        "description": "Nj\u00eb butik mode bashk\u00ebkohor i dizajnuar rreth qart\u00ebsis\u00eb, simetris\u00eb dhe minimalizmit t\u00eb rafinuar. Hap\u00ebsira p\u00ebrfshin nj\u00eb plan t\u00eb past\u00ebr me ishuj qendror\u00eb ekspozimi dhe rafta perimetrale, duke krijuar qarkullim intuitiv dhe ekuilibr\u00eb t\u00eb fort\u00eb vizuale.",
+        "location": "Shtip, Maqedoni",
+        "category": "Komercial",
+        "client": "Privat"
+      },
+      "1": {
+        "title": "Qendra e Arteve Mozaik",
+        "description": "Nj\u00eb linja \u00e7atie e valur e paneleve t\u00eb bakrit t\u00eb perforuar krijon modele drite gjithmonj\u00eb n\u00eb ndryshim n\u00eb dyshemerat e galeris\u00eb. Nd\u00ebrtesa \u00ebsht\u00eb organizuar rreth nj\u00eb atriumi qendror q\u00eb sh\u00ebrben si boshti i qarkullimit ashtu edhe si hap\u00ebsir\u00eb ekspozite.",
+        "location": "Shkup, Maqedoni",
+        "category": "Kulturor",
+        "client": "Komuna e Shkupit"
+      },
+      "2": {
+        "title": "Kulla Vertex",
+        "description": "Nj\u00eb kull\u00eb komerciale 16-kat\u00ebshe me nj\u00eb gjeometri t\u00eb veçant\u00eb t\u00eb p\u00ebrdrdhur q\u00eb optimizon deprim\u00ebn e drit\u00ebs s\u00eb dit\u00ebs dhe ul ngark\u00ebsen e er\u00ebs. Sistemi i fasad\u00ebs me lamela qeramike reagon ndaj orientimit diellor.",
+        "location": "Shkup, Maqedoni",
+        "category": "Komercial",
+        "client": "Vertex Group"
+      },
+      "3": {
+        "title": "Vila Kopshti i Gur\u00ebt",
+        "description": "E vendosur n\u00eb an\u00ebn e nj\u00eb kodre, kjo rezidenc\u00eb p\u00ebrb\u00ebhet nga tre voluma guri t\u00eb nd\u00ebrlidhur t\u00eb lidhur me ura xhami. \u00c7do volum\u00eb kornizn nj\u00eb pamje specifike t\u00eb peizazhit \u2014 malin, kopshtin dhe qiellin.",
+        "location": "Manastir, Maqedoni",
+        "category": "Rezidencial",
+        "client": "Privat"
+      },
+      "4": {
+        "title": "Puntorja",
+        "description": "Nj\u00eb magazin\u00eb ish-tekstile e transformuar n\u00eb nj\u00eb hap\u00ebsir\u00eb bashk\u00eb-pune q\u00eb e feston trash\u00ebgimin\u00eb e saj industriale. Mure t\u00eb ekspozuara tulle dhe armatura \u00e7eliku kontrastojn\u00eb me futje t\u00eb rafinuara t\u00eb lisit t\u00eb bardh\u00eb dhe bronzit.",
+        "location": "Tetov\u00eb, Maqedoni",
+        "category": "Enterier",
+        "client": "CreativeLab"
+      },
+      "5": {
+        "title": "Promenada e Lumit",
+        "description": "Nj\u00eb nd\u00ebrhyrje urbane 1.2 km q\u00eb e rilid qytetin me lumin e tij. Tarracat me shkall\u00eb t\u00eb travertinit lokal zbrisin deri n\u00eb vijin e ujit, duke krijuar hap\u00ebsira sociale fleksib\u00ebl.",
+        "location": "Shkup, Maqedoni",
+        "category": "Publik",
+        "client": "Qyteti i Shkupit"
+      },
+      "6": {
+        "title": "Sht\u00ebpia Horizont",
+        "description": "Nj\u00eb strehim malor i dizajnuar si nj\u00eb gjest i vet\u00ebm horizontal n\u00eb peizazh. Plani i zgjatur maksimizon pamjet p\u00ebrgjat\u00eb lugin\u00ebs nd\u00ebrsa \u00e7atia e gjelbr\u00eb e bashkon nd\u00ebrtes\u00ebn me livadhin alpine.",
+        "location": "Mavrov\u00eb, Maqedoni",
+        "category": "Rezidencial",
+        "client": "Privat"
+      },
+      "7": {
+        "title": "Galeria M",
+        "description": "Nj\u00eb galeri arti private e konceptuar si nj\u00eb seri dhomash me proporcione dhe kushte drite t\u00eb kalibura me precizion. \u00c7do galeri \u00ebsht\u00eb e p\u00ebrshtatur p\u00ebr nj\u00eb medium specifik \u2014 piktur\u00eb, skulptur\u00eb, fotografi.",
+        "location": "Shkup, Maqedoni",
+        "category": "Kulturor",
+        "client": "Fondacioni M"
+      },
+      "8": {
+        "title": "Parku i Zyrave Cedar",
+        "description": "Tre nd\u00ebrtesa zyra t\u00eb ul\u00ebta t\u00eb organizuara rreth nj\u00eb kopshti t\u00eb p\u00ebrbashk\u00ebt oborri. Kompleksi prioritizon dizajnin biofilik me fasada t\u00eb mbjella, ventilim natyror dhe brendsh\u00ebri t\u00eb ndri\u00e7uara me drit\u00ebn e dit\u00ebs.",
+        "location": "Shkup, Maqedoni",
+        "category": "Komercial",
+        "client": "Cedar Investments"
+      },
+      "9": {
+        "title": "Rezidenca Loft",
+        "description": "Nj\u00eb apartament penthouse ku tavane betoni t\u00eb paperpunuara dhe dysheme terraco t\u00eb l\u00ebmuara krijojn\u00eb nj\u00eb p\u00ebld\u00eb industriale t\u00eb rafinuar. Zdruktht\u00ebtaria e porosi\u00ebt e arrut i p\u00ebrcakton zonat e jetess pa ndares.",
+        "location": "Shkup, Maqedoni",
+        "category": "Enterier",
+        "client": "Privat"
+      }
+    },
+    "services": {
+      "0": {
+        "title": "Arkitektur\u00eb",
+        "desc": "Nga koncepti deri n\u00eb p\u00ebrfundim \u2014 nd\u00ebrtesa rezidenciale, komerciale dhe publike t\u00eb dizajnuara me v\u00ebmendje ndaj kontekstit, materialitetit dhe drit\u00ebs."
+      },
+      "1": {
+        "title": "Dizajn Enterieri",
+        "desc": "P\u00ebrvoja hap\u00ebsinore q\u00eb balancojn\u00eb funksionin dhe atmosfer\u00ebn. Ne krijojm\u00eb enteriere q\u00eb ndihen si t\u00eb pashmangshme ashtu edhe surprizuese."
+      },
+      "2": {
+        "title": "Urbaniz\u00ebm",
+        "desc": "Masterplane dhe nd\u00ebrhyrje urbane q\u00eb krijojn\u00eb lagje t\u00eb gjalla, t\u00eb ec\u00ebshme dhe rimarrin hap\u00ebsirat publike t\u00eb pap\u00ebrdorura."
+      },
+      "3": {
+        "title": "Rinovim",
+        "desc": "Transformime t\u00eb nd\u00ebshme t\u00eb strukturave ekzistuese q\u00eb e nderojn\u00eb historin\u00eb e tyre duke plot\u00ebsuar nevojat bashk\u00ebkohore."
+      },
+      "4": {
+        "title": "Peizazh",
+        "desc": "Hap\u00ebsira t\u00eb jashtme t\u00eb dizajnuara si zgjatim i arkitektur\u00ebs \u2014 kopshte, oborre dhe peizazhe publike q\u00eb evoluojn\u00eb me stinot."
+      },
+      "5": {
+        "title": "Konsulenc\u00eb",
+        "desc": "Udh\u00ebzim ekspert p\u00ebr fizibilitetin, rregulloret, materialet dhe q\u00ebndrushm\u00ebrin\u00eb p\u00ebr projekte n\u00eb \u00e7do faz\u00eb zhvillimi."
+      }
+    },
+    "team": {
+      "0": { "role": "Partnere Themeluese" },
+      "1": { "role": "Drejtor Dizajni" },
+      "2": { "role": "Arkitekte Kryesore" },
+      "3": { "role": "Menaxher Projekti" }
+    }
+  }
+}

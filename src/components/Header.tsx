@@ -1,21 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const NAV_ITEMS = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/studio", label: "Studio" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
-];
+const NAV_KEYS = [
+  { href: "/", key: "home" },
+  { href: "/projects", key: "projects" },
+  { href: "/studio", key: "studio" },
+  { href: "/services", key: "services" },
+  { href: "/contact", key: "contact" },
+] as const;
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("nav");
 
   const dark = pathname === "/";
 
@@ -74,7 +76,7 @@ export default function Header() {
           className="hidden md:flex gap-8 items-center"
           aria-label="Main navigation"
         >
-          {NAV_ITEMS.map((item) => (
+          {NAV_KEYS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -93,7 +95,7 @@ export default function Header() {
                       : "var(--color-gray-3)",
               }}
             >
-              {item.label}
+              {t(item.key)}
               {isActive(item.href) && (
                 <span
                   className="absolute -bottom-0.5 left-0 right-0 h-[1.5px] rounded-sm transition-colors duration-300"
@@ -108,6 +110,7 @@ export default function Header() {
               )}
             </Link>
           ))}
+          <LanguageSwitcher scrolled={scrolled} showWhite={showWhite} />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -118,16 +121,16 @@ export default function Header() {
           }}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-label={menuOpen ? t("close") : t("menu")}
         >
-          {menuOpen ? "Close" : "Menu"}
+          {menuOpen ? t("close") : t("menu")}
         </button>
       </header>
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-99 bg-white flex flex-col items-center justify-center gap-7 animate-fade-in">
-          {NAV_ITEMS.map((item, i) => (
+          {NAV_KEYS.map((item, i) => (
             <Link
               key={item.href}
               href={item.href}
@@ -140,9 +143,12 @@ export default function Header() {
               }}
               onClick={() => setMenuOpen(false)}
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
+          <div className="mt-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <LanguageSwitcher scrolled={true} showWhite={false} />
+          </div>
         </div>
       )}
     </>
