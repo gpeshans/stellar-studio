@@ -36,10 +36,10 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
       <div className="flex gap-10 flex-wrap justify-center pt-8">
         {META_FIELDS.map((m) => (
           <div key={m.label}>
-            <p className="font-body text-sm font-medium tracking-[0.15em] uppercase text-gray-3 mb-1">
+            <p className="font-body text-xs font-medium tracking-[0.15em] uppercase text-gray-3 mb-1">
               {m.label}
             </p>
-            <p className="font-body text-lg font-normal text-gray-1">
+            <p className="font-body text-base font-normal text-gray-1">
               {m.value}
             </p>
           </div>

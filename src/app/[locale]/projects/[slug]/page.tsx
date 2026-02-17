@@ -32,10 +32,10 @@ export async function generateMetadata({
   const description = t(`${idx}.description`);
 
   return {
-    title: project.title,
+    title: t(`${idx}.title`),
     description,
     openGraph: {
-      title: `${project.title} | Stellar Architecture Studio`,
+      title: `${t(`${idx}.title`)} | Stellar Architecture Studio`,
       description,
       images: [{ url: project.img, width: 1200, height: 800 }],
     },

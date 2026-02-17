@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Project } from "@/lib/types";
+import { PROJECTS } from "@/lib/data";
 
 interface ProjectCardProps {
   project: Project;
@@ -9,6 +11,10 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, ratio, index }: ProjectCardProps) {
+  const tp = useTranslations("data.projects");
+  const tc = useTranslations("categories");
+  const idx = PROJECTS.indexOf(project);
+
   return (
     <Link
       href={`/projects/${project.slug}`}
@@ -18,7 +24,7 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
       <div className="relative overflow-hidden bg-bg2" style={{ aspectRatio: ratio }}>
         <Image
           src={project.img}
-          alt={project.title}
+          alt={tp(`${idx}.title`)}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           style={{ transitionTimingFunction: "var(--ease-smooth)" }}
@@ -29,13 +35,13 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
         style={{ padding: "clamp(16px, 2.5vw, 36px)", transitionTimingFunction: "var(--ease-smooth)" }}
       >
         <p className="font-body text-xs font-medium tracking-[0.15em] uppercase opacity-50 mb-2">
-          {project.category} — {project.year}
+          {tc(project.category)} — {project.year}
         </p>
         <h3 className="font-display text-[clamp(18px,2.2vw,30px)] font-medium tracking-tight mb-1.5">
-          {project.title}
+          {tp(`${idx}.title`)}
         </h3>
         <p className="font-body text-sm font-light opacity-60">
-          {project.location}
+          {tp(`${idx}.location`)}
         </p>
       </div>
     </Link>
