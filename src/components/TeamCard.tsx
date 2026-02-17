@@ -18,7 +18,7 @@ export default function TeamCard({ member, role, index }: TeamCardProps) {
           src={member.img}
           alt={member.name}
           fill
-          className="object-cover grayscale transition-[filter] duration-500 group-hover:grayscale-0"
+          className="object-cover md:grayscale transition-[filter] duration-500 md:group-hover:grayscale-0"
           style={{ transitionTimingFunction: "var(--ease-smooth)" }}
           sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 25vw"
         />

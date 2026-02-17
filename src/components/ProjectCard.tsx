@@ -25,7 +25,7 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
           sizes="(max-width: 520px) 100vw, (max-width: 900px) 50vw, 33vw"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end text-white"
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end text-white"
         style={{ padding: "clamp(16px, 2.5vw, 36px)", transitionTimingFunction: "var(--ease-smooth)" }}
       >
         <p className="font-body text-xs font-medium tracking-[0.15em] uppercase opacity-50 mb-2">
