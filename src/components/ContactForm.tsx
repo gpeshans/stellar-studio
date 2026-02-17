@@ -60,7 +60,6 @@ export default function ContactForm() {
       <form
         onSubmit={handleSubmit}
         name="contact"
-        method="POST"
         className="flex flex-col gap-1.5"
       >
         <input type="hidden" name="form-name" value="contact" />
