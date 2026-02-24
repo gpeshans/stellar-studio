@@ -9,10 +9,10 @@ import { STOCK } from "@/lib/images";
 import { padIndex } from "@/lib/utils";
 
 const HEROES = [
-  { img: STOCK.hero1, project: PROJECTS[0] },
-  { img: STOCK.hero2, project: PROJECTS[1] },
-  { img: STOCK.hero3, project: PROJECTS[2] },
-  { img: STOCK.hero4, project: PROJECTS[3] },
+  { img: PROJECTS[0].img, project: PROJECTS[0] },
+  { img: PROJECTS[1].img, project: PROJECTS[1] },
+  // { img: STOCK.hero3, project: PROJECTS[2] },
+  // { img: STOCK.hero4, project: PROJECTS[3] },
 ];
 
 export default function Hero() {
@@ -49,7 +49,8 @@ export default function Hero() {
               fill
               className="object-cover brightness-[0.65]"
               style={{
-                animation: i === idx ? "hero-slow 10s ease-out forwards" : "none",
+                animation:
+                  i === idx ? "hero-slow 10s ease-out forwards" : "none",
               }}
               sizes="100vw"
               priority={i === 0}
@@ -60,7 +61,14 @@ export default function Hero() {
       })}
 
       {/* Content */}
-      <div className="absolute text-white" style={{ bottom: "clamp(48px, 10vh, 140px)", left: "var(--pad)", right: "var(--pad)" }}>
+      <div
+        className="absolute text-white"
+        style={{
+          bottom: "clamp(48px, 10vh, 140px)",
+          left: "var(--pad)",
+          right: "var(--pad)",
+        }}
+      >
         <p className="font-body text-[11px] font-medium tracking-[0.2em] uppercase opacity-50 mb-5">
           {padIndex(idx)} / {padIndex(HEROES.length - 1)}
         </p>
@@ -87,7 +95,11 @@ export default function Hero() {
           </Link>
 
           {/* Dots */}
-          <div className="flex gap-2" role="tablist" aria-label={tc("heroSlides")}>
+          <div
+            className="flex gap-2"
+            role="tablist"
+            aria-label={tc("heroSlides")}
+          >
             {HEROES.map((_, i) => {
               const dotIdx = PROJECTS.indexOf(HEROES[i].project);
               return (
@@ -97,13 +109,15 @@ export default function Hero() {
                   className="h-[3px] border-none cursor-pointer rounded-sm transition-all duration-500"
                   style={{
                     width: i === idx ? 28 : 8,
-                    background:
-                      i === idx ? "white" : "rgba(255,255,255,0.3)",
+                    background: i === idx ? "white" : "rgba(255,255,255,0.3)",
                     transitionTimingFunction: "var(--ease-smooth)",
                   }}
                   role="tab"
                   aria-selected={i === idx}
-                  aria-label={tc("slide", { num: i + 1, title: tp(`${dotIdx}.title`) })}
+                  aria-label={tc("slide", {
+                    num: i + 1,
+                    title: tp(`${dotIdx}.title`),
+                  })}
                 />
               );
             })}

@@ -109,10 +109,8 @@
   "categories": {
     "All": "All Projects",
     "Residential": "Residential",
-    "Cultural": "Cultural",
     "Commercial": "Commercial",
-    "Interior": "Interior",
-    "Public": "Public"
+    "Interior": "Interior"
   },
   "stats": {
     "stat0": "Projects",
@@ -138,16 +136,16 @@
       "0": {
         "title": "Brash Fashion",
         "description": "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
-        "location": "Shtip, Macedonia",
+        "location": "Shtip, North Macedonia",
         "category": "Commercial",
-        "client": "Private"
+        "client": "Brash Fashion"
       },
       "1": {
-        "title": "Mosaic Arts Center",
-        "description": "An undulating roofline of perforated copper panels creates ever-changing light patterns across the gallery floors. The building is organized around a central atrium that serves as both circulation spine and exhibition space, encouraging spontaneous encounters between visitors and art.",
-        "location": "Skopje, Macedonia",
-        "category": "Cultural",
-        "client": "Municipality of Skopje"
+        "title": "ALB Petrol",
+        "description": "Modern petrol station facade defined by clean geometry, a bold cantilevered canopy, and integrated LED lighting for strong day-night visibility. A restrained palette and transparent storefront create a clear, durable, and recognizable architectural identity.",
+        "location": "Tetovo, North Macedonia",
+        "category": "Commercial",
+        "client": "ALB Petrol"
       },
       "2": {
         "title": "Vertex Tower",
@@ -174,7 +172,7 @@
         "title": "Riverbank Promenade",
         "description": "A 1.2km urban intervention that reconnects the city with its river. Stepped terraces of local travertine descend to the waterline, creating flexible social spaces that accommodate everything from morning joggers to evening concerts.",
         "location": "Skopje, Macedonia",
-        "category": "Public",
+        "category": "Residential",
         "client": "City of Skopje"
       },
       "6": {
@@ -188,7 +186,7 @@
         "title": "Gallery M",
         "description": "A private art gallery conceived as a sequence of rooms with precisely calibrated proportions and light conditions. Each gallery is tailored to a specific medium \u2014 painting, sculpture, photography \u2014 while a rooftop terrace offers views across the old bazaar.",
         "location": "Skopje, Macedonia",
-        "category": "Cultural",
+        "category": "Commercial",
         "client": "Foundation M"
       },
       "8": {

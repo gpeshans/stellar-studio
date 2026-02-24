@@ -49,7 +49,6 @@ export async function generateMetadata({
   const localeMap: Record<string, string> = {
     en: "en_US",
     mk: "mk_MK",
-    sq: "sq_AL",
   };
 
   return {
@@ -80,7 +79,6 @@ export async function generateMetadata({
       languages: {
         en: "/en",
         mk: "/mk",
-        sq: "/sq",
       },
     },
   };

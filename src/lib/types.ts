@@ -5,8 +5,8 @@ export interface Project {
   location: string;
   category: Category;
   year: string;
-  area: string;
-  client: string;
+  area?: string;
+  client?: string;
   img: string;
   gallery: string[];
   description: string;

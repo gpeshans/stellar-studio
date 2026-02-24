@@ -28,7 +28,7 @@ export default async function HomePage({
         title={t("recentProjects")}
         sub={t("recentProjectsSub")}
       />
-      <ProjectGrid projects={PROJECTS.slice(0, 6)} />
+      <ProjectGrid projects={PROJECTS.slice(0, 2)} />
 
       <div className="flex justify-center py-12 pb-20">
         <Button href="/projects">{tc("allProjects")}</Button>
@@ -36,7 +36,11 @@ export default async function HomePage({
 
       <AboutTeaser />
 
-      <SectionTitle label={t("expertise")} title={t("services")} align="center" />
+      <SectionTitle
+        label={t("expertise")}
+        title={t("services")}
+        align="center"
+      />
       <ServicePreviewGrid />
     </div>
   );

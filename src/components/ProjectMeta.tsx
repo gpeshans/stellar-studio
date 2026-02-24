@@ -15,7 +15,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
   const META_FIELDS = [
     { label: t("location"), value: tp(`${idx}.location`) },
     { label: t("year"), value: project.year },
-    { label: t("area"), value: project.area },
+    { label: t("area"), value: project.area || "/" },
     { label: t("category"), value: tp(`${idx}.category`) },
     { label: t("client"), value: tp(`${idx}.client`) },
   ];

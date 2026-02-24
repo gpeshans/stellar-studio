@@ -7,7 +7,6 @@ import { routing } from "@/i18n/routing";
 const LOCALE_LABELS: Record<string, string> = {
   en: "EN",
   mk: "MK",
-  sq: "SQ",
 };
 
 interface LanguageSwitcherProps {
