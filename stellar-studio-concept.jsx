@@ -968,43 +968,43 @@ function ProjectGrid({ onNavigate, filter = "All", limit }) {
 }
 
 // ─── Marquee ───────────────────────────────────────────────────────
-function Marquee() {
-  const t = "STELLAR — ARCHITECTURE — DESIGN — SPACE — FORM — LIGHT — ";
-  return (
-    <div
-      style={{
-        overflow: "hidden",
-        padding: "36px 0",
-        borderTop: "1px solid var(--gray5)",
-        borderBottom: "1px solid var(--gray5)",
-        background: "var(--bg)",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          whiteSpace: "nowrap",
-          animation: "marquee 20s linear infinite",
-        }}
-      >
-        {[0, 1, 2, 3].map((i) => (
-          <span
-            key={i}
-            style={{
-              fontFamily: "var(--display)",
-              fontSize: "clamp(24px, 4vw, 48px)",
-              fontWeight: 700,
-              color: "var(--gray5)",
-              letterSpacing: "0.04em",
-            }}
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
+// function Marquee() {
+//   const t = "STELLAR — ARCHITECTURE — DESIGN — SPACE — FORM — LIGHT — ";
+//   return (
+//     <div
+//       style={{
+//         overflow: "hidden",
+//         padding: "36px 0",
+//         borderTop: "1px solid var(--gray5)",
+//         borderBottom: "1px solid var(--gray5)",
+//         background: "var(--bg)",
+//       }}
+//     >
+//       <div
+//         style={{
+//           display: "flex",
+//           whiteSpace: "nowrap",
+//           animation: "marquee 20s linear infinite",
+//         }}
+//       >
+//         {[0, 1, 2, 3].map((i) => (
+//           <span
+//             key={i}
+//             style={{
+//               fontFamily: "var(--display)",
+//               fontSize: "clamp(24px, 4vw, 48px)",
+//               fontWeight: 700,
+//               color: "var(--gray5)",
+//               letterSpacing: "0.04em",
+//             }}
+//           >
+//             {t}
+//           </span>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 
 // ═══════════════════ PAGES ═══════════════════════════════════════
 
@@ -1016,7 +1016,7 @@ function HomePage({ onNavigate }) {
       <SectionTitle
         label="Selected Work"
         title="Recent Projects"
-        sub="A curated selection of our latest residential, cultural, and commercial work."
+        sub="A curated selection of our latest residential, interior, and commercial work."
       />
       <ProjectGrid onNavigate={onNavigate} limit={6} />
 

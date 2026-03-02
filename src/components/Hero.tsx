@@ -5,14 +5,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { PROJECTS } from "@/lib/data";
-import { STOCK } from "@/lib/images";
 import { padIndex } from "@/lib/utils";
 
 const HEROES = [
   { img: PROJECTS[0].img, project: PROJECTS[0] },
+  { img: PROJECTS[3].img, project: PROJECTS[3] },
   { img: PROJECTS[1].img, project: PROJECTS[1] },
-  // { img: STOCK.hero3, project: PROJECTS[2] },
-  // { img: STOCK.hero4, project: PROJECTS[3] },
 ];
 
 export default function Hero() {

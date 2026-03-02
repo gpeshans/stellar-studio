@@ -37,7 +37,7 @@
   "home": {
     "selectedWork": "Selected Work",
     "recentProjects": "Recent Projects",
-    "recentProjectsSub": "A curated selection of our latest residential, cultural, and commercial work.",
+    "recentProjectsSub": "A curated selection of our latest residential, interior, and commercial work.",
     "expertise": "Expertise",
     "services": "Services"
   },
@@ -134,25 +134,25 @@
   "data": {
     "projects": {
       "0": {
+        "title": "GIA House",
+        "description": "A modern residential house in Berovo, North Macedonia, designed with a focus on natural light and open spaces. The building features a clean, minimalist aesthetic with large windows and a seamless integration of indoor and outdoor living.",
+        "location": "Berovo, North Macedonia",
+        "category": "Residential",
+        "client": "Private"
+      },
+      "1": {
         "title": "Brash Fashion",
         "description": "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
         "location": "Shtip, North Macedonia",
         "category": "Commercial",
         "client": "Brash Fashion"
       },
-      "1": {
+      "2": {
         "title": "ALB Petrol",
         "description": "Modern petrol station facade defined by clean geometry, a bold cantilevered canopy, and integrated LED lighting for strong day-night visibility. A restrained palette and transparent storefront create a clear, durable, and recognizable architectural identity.",
         "location": "Tetovo, North Macedonia",
         "category": "Commercial",
         "client": "ALB Petrol"
-      },
-      "2": {
-        "title": "Vertex Tower",
-        "description": "A 16-story commercial tower with a distinctive twisted geometry that optimizes daylight penetration and reduces wind load. The fa\u00e7ade system of ceramic louvers responds to solar orientation, creating a dynamic skin that shifts in appearance throughout the day.",
-        "location": "Skopje, Macedonia",
-        "category": "Commercial",
-        "client": "Vertex Group"
       },
       "3": {
         "title": "Stone Garden Villa",

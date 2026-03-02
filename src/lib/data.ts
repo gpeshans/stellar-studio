@@ -24,6 +24,26 @@ export const CATEGORIES: CategoryItem[] = [
 const RAW_PROJECTS: Omit<Project, "slug">[] = [
   {
     id: 1,
+    title: "GIA House",
+    location: "Berovo, North Macedonia",
+    category: "Residential",
+    year: "2020",
+    area: "500 m²",
+    client: "Private",
+    img: "/images/projects/residential/gia-house/title.jpg",
+    gallery: [
+      "/images/projects/residential/gia-house/title.jpg",
+      "/images/projects/residential/gia-house/1.jpg",
+      "/images/projects/residential/gia-house/2.jpg",
+      "/images/projects/residential/gia-house/3.jpg",
+      "/images/projects/residential/gia-house/4.jpg",
+      "/images/projects/residential/gia-house/5.jpg",
+    ],
+    description:
+      "A modern residential house in Berovo, North Macedonia, designed with a focus on natural light and open spaces. The building features a clean, minimalist aesthetic with large windows and a seamless integration of indoor and outdoor living.",
+  },
+  {
+    id: 2,
     title: "Brash Fashion",
     location: "Shtip, North Macedonia",
     category: "Commercial",
@@ -48,7 +68,7 @@ const RAW_PROJECTS: Omit<Project, "slug">[] = [
       "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
   },
   {
-    id: 2,
+    id: 3,
     title: "ALB Petrol",
     location: "Tetovo, North Macedonia",
     category: "Commercial",
@@ -61,6 +81,25 @@ const RAW_PROJECTS: Omit<Project, "slug">[] = [
     ],
     description:
       "Modern petrol station facade defined by clean geometry, a bold cantilevered canopy, and integrated LED lighting for strong day-night visibility. A restrained palette and transparent storefront create a clear, durable, and recognizable architectural identity.",
+  },
+  {
+    id: 4,
+    title: "SV Weekend House",
+    location: "Suvi Laki, North Macedonia",
+    category: "Residential",
+    year: "2021",
+    area: "100 m²",
+    client: "Private",
+    img: "/images/projects/residential/sv-weekend-house/title.jpg",
+    gallery: [
+      "/images/projects/residential/sv-weekend-house/title.jpg",
+      "/images/projects/residential/sv-weekend-house/1.jpg",
+      "/images/projects/residential/sv-weekend-house/2.jpg",
+      "/images/projects/residential/sv-weekend-house/3.jpg",
+      "/images/projects/residential/sv-weekend-house/4.jpg",
+    ],
+    description:
+      "A weekend house located in the serene countryside of Suvi Laki, North Macedonia. The design emphasizes a strong connection to nature, with large windows framing picturesque views and a spacious deck that extends into the landscape. The interior features a warm, minimalist aesthetic with natural materials and an open floor plan that encourages relaxation and socializing.",
   },
   // {
   //   id: 3,

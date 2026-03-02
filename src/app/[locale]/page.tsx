@@ -28,7 +28,7 @@ export default async function HomePage({
         title={t("recentProjects")}
         sub={t("recentProjectsSub")}
       />
-      <ProjectGrid projects={PROJECTS.slice(0, 2)} />
+      <ProjectGrid projects={PROJECTS.slice(0, 4)} />
 
       <div className="flex justify-center py-12 pb-20">
         <Button href="/projects">{tc("allProjects")}</Button>
