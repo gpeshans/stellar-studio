@@ -70,7 +70,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
   return (
     <section className="px-[var(--pad)]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-0.5">
         {projects.map((project, i) => {
           const pattern = patterns[i];
           return (
