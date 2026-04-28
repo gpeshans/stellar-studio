@@ -214,28 +214,16 @@ export const PROJECTS: Project[] = RAW_PROJECTS.map((p) => ({
 
 export const SERVICES: Service[] = [
   {
-    title: "Architecture",
-    desc: "From concept to completion — residential, commercial, and public buildings designed with meticulous attention to context, materiality, and light.",
+    title: "Architectural Design",
+    desc: "Complete design and project documentation for residential, commercial, and public buildings — from concept and feasibility through permits, technical drawings, and on-site coordination.",
   },
   {
     title: "Interior Design",
-    desc: "Spatial experiences that balance function and atmosphere. We craft interiors that feel both inevitable and surprising.",
-  },
-  {
-    title: "Urban Planning",
-    desc: "Masterplans and urban interventions that create vibrant, walkable neighborhoods and reclaim underused public spaces.",
-  },
-  {
-    title: "Renovation",
-    desc: "Sensitive transformations of existing structures that honor their history while meeting contemporary needs.",
-  },
-  {
-    title: "Landscape",
-    desc: "Outdoor spaces designed as extensions of architecture — gardens, courtyards, and public landscapes that evolve with the seasons.",
+    desc: "Bespoke turnkey interiors for new spaces and renovations, delivered with full project documentation and advanced 3D visualizations that let you experience the space before it's built.",
   },
   {
     title: "Consultation",
-    desc: "Expert guidance on feasibility, regulations, materials, and sustainability for projects at any stage of development.",
+    desc: "Focused, time-boxed sessions on site, regulation, layout, or material questions — each one ending with a tailored written brief you can act on independently or hand to your team.",
   },
 ];
 

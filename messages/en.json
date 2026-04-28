@@ -125,7 +125,7 @@
     "projectsTitle": "Projects",
     "projectsDesc": "Browse our complete portfolio of architectural projects \u2014 residential, commercial, cultural, interior, and public spaces across Macedonia.",
     "servicesTitle": "Services",
-    "servicesDesc": "End-to-end architectural services from Stellar Architecture Studio \u2014 architecture, interior design, urban planning, renovation, landscape, and consultation.",
+    "servicesDesc": "Architectural design, interior design, and consultation services from Stellar Architecture Studio \u2014 full project coordination, documentation, and 3D visualizations for residential, commercial, and public spaces.",
     "studioTitle": "Studio",
     "studioDesc": "Learn about Stellar Architecture Studio \u2014 a multidisciplinary design practice founded in Skopje, Macedonia. Meet our team of architects and designers.",
     "contactTitle": "Contact",
@@ -206,28 +206,16 @@
     },
     "services": {
       "0": {
-        "title": "Architecture",
-        "desc": "From concept to completion \u2014 residential, commercial, and public buildings designed with meticulous attention to context, materiality, and light."
+        "title": "Architectural Design",
+        "desc": "Complete design and project documentation for residential, commercial, and public buildings \u2014 from concept and feasibility through permits, technical drawings, and on-site coordination."
       },
       "1": {
         "title": "Interior Design",
-        "desc": "Spatial experiences that balance function and atmosphere. We craft interiors that feel both inevitable and surprising."
+        "desc": "Bespoke turnkey interiors for new spaces and renovations, delivered with full project documentation and advanced 3D visualizations that let you experience the space before it's built."
       },
       "2": {
-        "title": "Urban Planning",
-        "desc": "Masterplans and urban interventions that create vibrant, walkable neighborhoods and reclaim underused public spaces."
-      },
-      "3": {
-        "title": "Renovation",
-        "desc": "Sensitive transformations of existing structures that honor their history while meeting contemporary needs."
-      },
-      "4": {
-        "title": "Landscape",
-        "desc": "Outdoor spaces designed as extensions of architecture \u2014 gardens, courtyards, and public landscapes that evolve with the seasons."
-      },
-      "5": {
         "title": "Consultation",
-        "desc": "Expert guidance on feasibility, regulations, materials, and sustainability for projects at any stage of development."
+        "desc": "Focused, time-boxed sessions on site, regulation, layout, or material questions \u2014 each one ending with a tailored written brief you can act on independently or hand to your team."
       }
     },
     "team": {
