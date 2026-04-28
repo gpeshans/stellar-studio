@@ -32,12 +32,12 @@ const ROW_TEMPLATES: Pattern[][] = [
 const CYCLE = [0, 1, 2, 3, 4]; // A, B, C, D, E
 
 const REMAINDER_ROWS: number[][] = [
-  [],        // 0
-  [4],       // 1 → E
-  [2],       // 2 → C
-  [3],       // 3 → D
-  [0, 2],    // 4 → A, C
-  [2, 3],    // 5 → C, D
+  [], // 0
+  [4], // 1 → E
+  [2], // 2 → C
+  [3], // 3 → D
+  [0, 2], // 4 → A, C
+  [2, 3], // 5 → C, D
   [0, 1, 2], // 6 → A, B, C
   [0, 1, 3], // 7 → A, B, D
   [0, 1, 3, 4], // 8 → A, B, D, E
@@ -45,7 +45,10 @@ const REMAINDER_ROWS: number[][] = [
 ];
 
 function buildPatterns(count: number): Pattern[] {
-  const cycleLength = CYCLE.reduce((sum, i) => sum + ROW_TEMPLATES[i].length, 0);
+  const cycleLength = CYCLE.reduce(
+    (sum, i) => sum + ROW_TEMPLATES[i].length,
+    0,
+  );
   const fullCycles = Math.floor(count / cycleLength);
   const remainder = count % cycleLength;
 
@@ -70,7 +73,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
   return (
     <section className="px-[var(--pad)]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-0.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-px">
         {projects.map((project, i) => {
           const pattern = patterns[i];
           return (
