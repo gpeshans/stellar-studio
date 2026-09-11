@@ -28,9 +28,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  useEffect(() => {
+  // Close the mobile menu whenever the route changes. Adjusting state during
+  // render (rather than in an effect) avoids a cascading re-render, and covers
+  // navigation that bypasses the menu links, e.g. back/forward or the language
+  // switcher. See https://react.dev/learn/you-might-not-need-an-effect
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setMenuOpen(false);
-  }, [pathname]);
+  }
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RootNotFound() {
   return (
     <html lang="en">
@@ -12,12 +14,12 @@ export default function RootNotFound() {
           <p style={{ fontSize: 15, fontWeight: 300, color: "#666", marginBottom: 40, maxWidth: 400 }}>
             The page you are looking for does not exist or has been moved.
           </p>
-          <a
+          <Link
             href="/"
             style={{ background: "#000", color: "#fff", padding: "15px 48px", fontSize: 12, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none" }}
           >
             Back to home
-          </a>
+          </Link>
         </div>
       </body>
     </html>
