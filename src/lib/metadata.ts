@@ -1,7 +1,17 @@
 import type { Project } from "./types";
+import { CONTACT } from "./contact";
 
-const SITE_URL = "https://stellar-arch.com";
+/** The site's public address, for canonical URLs, the sitemap and structured data. */
+export const SITE_URL = "https://stellararchitecture.com";
 const SITE_NAME = "Stellar Architecture Studio";
+
+const POSTAL_ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: CONTACT.address.street,
+  addressLocality: CONTACT.address.city,
+  postalCode: CONTACT.address.postalCode,
+  addressCountry: CONTACT.address.country,
+};
 
 export function organizationJsonLd(locale?: string) {
   const url = locale ? `${SITE_URL}/${locale}` : SITE_URL;
@@ -13,24 +23,14 @@ export function organizationJsonLd(locale?: string) {
     logo: `${SITE_URL}/og-default.jpg`,
     description:
       "Architecture and interior design studio based in Skopje, Macedonia.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "ul. Makedonija 12",
-      addressLocality: "Skopje",
-      postalCode: "1000",
-      addressCountry: "MK",
-    },
+    address: POSTAL_ADDRESS,
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@stellar-arch.com",
-      telephone: "+389-2-XXX-XXX",
+      email: CONTACT.email,
+      telephone: CONTACT.phoneE164,
       contactType: "customer service",
     },
-    sameAs: [
-      "https://instagram.com/stellararch",
-      "https://linkedin.com/company/stellararch",
-      "https://facebook.com/stellararch",
-    ],
+    sameAs: CONTACT.social.map((s) => s.url),
   };
 }
 
@@ -42,21 +42,15 @@ export function localBusinessJsonLd() {
     name: SITE_NAME,
     image: `${SITE_URL}/og-default.jpg`,
     url: SITE_URL,
-    telephone: "+389-2-XXX-XXX",
-    email: "hello@stellar-arch.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "ul. Makedonija 12",
-      addressLocality: "Skopje",
-      postalCode: "1000",
-      addressCountry: "MK",
-    },
+    telephone: CONTACT.phoneE164,
+    email: CONTACT.email,
+    address: POSTAL_ADDRESS,
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 41.9973,
-      longitude: 21.428,
+      ...CONTACT.geo,
     },
-    openingHours: "Mo-Fr 09:00-18:00",
+    hasMap: CONTACT.mapsUrl,
+    openingHours: CONTACT.openingHours,
     priceRange: "$$$$",
   };
 }

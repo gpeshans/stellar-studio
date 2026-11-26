@@ -1,12 +1,65 @@
+<!DOCTYPE html>
+<!--
+  Netlify Forms definitions. On Netlify's Next.js runtime the real forms are
+  rendered by React, so Netlify detects them from these static copies at
+  deploy time. Every field a form submits must be listed on its copy here,
+  or Netlify drops it. Quote fields come from src/lib/quote.ts.
+-->
 <html>
   <head></head>
   <body>
-    <form name="contact" data-netlify="true" hidden>
-      <input type="hidden" name="form-name" value="contact" />
-      <input name="name" type="text" />
+    <form name="quote-architecture" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="form-name" value="quote-architecture" />
+      <input name="bot-field" />
+      <input name="subject" />
+      <input name="language" />
+      <input name="project_type" />
+      <input name="location" />
+      <input name="floor_area" />
+      <input name="plot_area" />
+      <input name="stage" />
+      <input name="scope" />
+      <input name="start" />
+      <input name="budget" />
+      <input name="name" />
       <input name="email" type="email" />
-      <input name="subject" type="text" />
+      <input name="phone" type="tel" />
       <textarea name="message"></textarea>
+      <input name="attachment" type="file" />
+      <input name="consent" type="checkbox" />
+    </form>
+
+    <form name="quote-interiors" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="form-name" value="quote-interiors" />
+      <input name="bot-field" />
+      <input name="subject" />
+      <input name="language" />
+      <input name="space_type" />
+      <input name="location" />
+      <input name="area" />
+      <input name="stage" />
+      <input name="engagement" />
+      <input name="timing" />
+      <input name="budget" />
+      <input name="name" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <textarea name="message"></textarea>
+      <input name="attachment" type="file" />
+      <input name="consent" type="checkbox" />
+    </form>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="subject" />
+      <input name="language" />
+      <input name="topic" />
+      <input name="name" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <textarea name="message"></textarea>
+      <input name="consent" type="checkbox" />
     </form>
   </body>
 </html>

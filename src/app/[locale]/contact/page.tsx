@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import SectionTitle from "@/components/SectionTitle";
-import ContactInfo from "@/components/ContactInfo";
-import ContactForm from "@/components/ContactForm";
+import QuoteCalculator from "@/components/QuoteCalculator";
+import EnquiryForm from "@/components/EnquiryForm";
+import StudioDetails from "@/components/StudioDetails";
 import { breadcrumbJsonLd, localBusinessJsonLd } from "@/lib/metadata";
+
+const SECTIONS = ["quote", "enquiry", "studio"] as const;
 
 export async function generateMetadata({
   params,
@@ -35,12 +38,27 @@ export default async function ContactPage({
 
   return (
     <div className="pt-16">
-      <SectionTitle label={t("label")} title={t("title")} />
+      <SectionTitle label={t("label")} title={t("title")} sub={t("intro")} />
 
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-20 md:gap-20 px-[clamp(20px,5vw,72px)] pb-24">
-        <ContactInfo />
-        <ContactForm />
-      </div>
+      <nav
+        aria-label={t("jump.label")}
+        className="flex flex-wrap gap-x-8 gap-y-3 px-[var(--pad)] -mt-4 pb-16"
+      >
+        {SECTIONS.map((id) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className="inline-flex items-center gap-2 font-body text-xs font-medium tracking-[0.1em] uppercase text-gray-2 hover:text-black transition-colors duration-300"
+          >
+            {t(`jump.${id}`)}
+            <span aria-hidden="true">↓</span>
+          </a>
+        ))}
+      </nav>
+
+      <QuoteCalculator />
+      <EnquiryForm />
+      <StudioDetails />
 
       <script
         type="application/ld+json"
@@ -54,7 +72,7 @@ export default async function ContactPage({
           __html: JSON.stringify(
             breadcrumbJsonLd(locale, [
               { name: "Home", url: "/" },
-              { name: t("title"), url: "/contact" },
+              { name: t("label"), url: "/contact" },
             ])
           ),
         }}

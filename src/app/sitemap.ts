@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { PROJECTS } from "@/lib/data";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://stellar-arch.com";
+  const baseUrl = SITE_URL;
 
   function alternates(path: string) {
     const languages: Record<string, string> = {};

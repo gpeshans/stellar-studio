@@ -10,7 +10,7 @@ import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
-import { organizationJsonLd } from "@/lib/metadata";
+import { organizationJsonLd, SITE_URL } from "@/lib/metadata";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -52,7 +52,7 @@ export async function generateMetadata({
   };
 
   return {
-    metadataBase: new URL("https://stellar-arch.com"),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t("defaultTitle"),
       template: `%s | Stellar Architecture Studio`,

@@ -1,12 +1,16 @@
+import type { ComponentProps } from "react";
+import { Link } from "@/i18n/navigation";
 import { padIndex } from "@/lib/utils";
 import type { Service } from "@/lib/types";
 
 interface ServiceRowProps {
   service: Service;
   index: number;
+  /** Link to the Contact page with this service picked. */
+  cta: { label: string; href: ComponentProps<typeof Link>["href"] };
 }
 
-export default function ServiceRow({ service, index }: ServiceRowProps) {
+export default function ServiceRow({ service, index, cta }: ServiceRowProps) {
   return (
     <div
       className="group grid grid-cols-[32px_1fr] md:grid-cols-[48px_1fr_2fr] gap-x-6 gap-y-5 py-10 border-b border-gray-5 items-baseline animate-fade-up transition-[padding-left] duration-400 hover:pl-3"
@@ -59,6 +63,18 @@ export default function ServiceRow({ service, index }: ServiceRowProps) {
             ))}
           </div>
         )}
+        <Link
+          href={cta.href}
+          className="group/cta mt-7 inline-flex items-center gap-2.5 border-b border-black pb-1 font-body text-xs font-medium tracking-[0.1em] uppercase text-black"
+        >
+          {cta.label}
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-300 group-hover/cta:translate-x-1"
+          >
+            →
+          </span>
+        </Link>
       </div>
     </div>
   );

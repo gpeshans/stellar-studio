@@ -5,6 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ServiceRow from "@/components/ServiceRow";
 import Button from "@/components/Button";
 import { breadcrumbJsonLd } from "@/lib/metadata";
+import { contactHref, isQuoteService } from "@/lib/enquiry";
 import type { Service } from "@/lib/types";
 
 export async function generateMetadata({
@@ -51,7 +52,15 @@ export default async function ServicesPage({
 
       <div className="px-[clamp(20px,5vw,72px)] pb-20">
         {SERVICES.map((key, i) => (
-          <ServiceRow key={key} service={service(key)} index={i} />
+          <ServiceRow
+            key={key}
+            service={service(key)}
+            index={i}
+            cta={{
+              label: t(isQuoteService(key) ? "requestQuote" : "sendEnquiry"),
+              href: contactHref(key),
+            }}
+          />
         ))}
       </div>
 

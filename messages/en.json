@@ -27,10 +27,9 @@
     "social": "Social",
     "contact": "Contact",
     "tagline": "Architecture studio based in Skopje, Macedonia. Designing spaces that inspire.",
-    "address": "ul. Makedonija 12",
-    "city": "1000 Skopje, Macedonia",
-    "email": "hello@stellar-arch.com",
-    "phone": "+389 2 XXX XXX",
+    "address": "Bulevar Partizanski Odredi 106/1-42",
+    "city": "Karposh, 1000 Skopje, Macedonia",
+    "hours": "Mon–Fri, 08:00–16:00",
     "copyright": "\u00a9 2025 Stellar Architecture Studio",
     "legal": "Privacy \u00b7 Terms"
   },
@@ -69,6 +68,8 @@
     "sub": "We design houses, residential and commercial buildings, and interiors. Every project is led personally by Brankica, architect and founder of Stellar, with a trusted team of engineers and specialists for each phase.",
     "ctaHeading": "Planning a house, a building or an interior?",
     "ctaSub": "Tell us where it is, how big it is, what stage it's at and when you'd like to start \u2014 we'll tell you how we can help.",
+    "requestQuote": "Request a quote",
+    "sendEnquiry": "Send an enquiry",
     "ctaButton": "Get in Touch"
   },
   "studio": {
@@ -81,21 +82,195 @@
     "teamTitle": "Our Team"
   },
   "contact": {
-    "label": "Get in Touch",
-    "title": "Contact",
-    "formIntro": "Whether you're planning a new build, a renovation, or just exploring ideas \u2014 tell us about your vision and we'll take it from there.",
-    "nameLabel": "Your Name",
-    "emailLabel": "Email Address",
-    "subjectLabel": "Subject",
-    "messageLabel": "Tell us about your project...",
-    "successTitle": "Message Sent",
-    "successMessage": "We'll respond within 48 hours.",
-    "errorMessage": "Failed to send message. Please try again later.",
-    "office": "Office",
-    "email": "Email",
-    "phone": "Phone",
-    "follow": "Follow",
-    "mapPlaceholder": "Map \u00b7 Skopje, Macedonia"
+    "label": "Contact",
+    "title": "Let's talk about your project",
+    "intro": "Tell us what you're planning and Brankica will prepare a quote within 24 hours. For anything else, send us a few lines.",
+    "jump": {
+      "label": "On this page",
+      "quote": "Request a quote",
+      "enquiry": "Other enquiries",
+      "studio": "Visit the studio"
+    },
+    "quote": {
+      "label": "Request a quote",
+      "tabs": {
+        "architecture": "Architecture",
+        "interiors": "Interiors"
+      },
+      "details": "Your details",
+      "attachment": "Plan or photo (optional)",
+      "attachmentHint": "PDF or image, up to 7 MB",
+      "chooseFile": "Choose file",
+      "noFile": "No file chosen",
+      "submit": "Request a quote",
+      "note": "Brankica prepares every quote personally and replies within 24 hours.",
+      "successTitle": "Thank you",
+      "successMessage": "Your request is with Brankica. You'll receive your quote within 24 hours.",
+      "architecture": {
+        "intro": "For a family house, or a residential or commercial building, from the first sketch to the building permit.",
+        "steps": {
+          "planning": "What are you planning?",
+          "site": "Where, and how big?",
+          "stage": "Where are you now?",
+          "scope": "What should we take on?",
+          "timing": "Timing and budget"
+        },
+        "fields": {
+          "project_type": {
+            "label": "Type of project",
+            "options": {
+              "house": "Family house",
+              "residentialBuilding": "Residential building",
+              "commercialBuilding": "Commercial building",
+              "other": "Something else"
+            }
+          },
+          "location": {
+            "label": "Location",
+            "placeholder": "City or municipality"
+          },
+          "floor_area": {
+            "label": "Planned floor area, approximately"
+          },
+          "plot_area": {
+            "label": "Plot area (optional)"
+          },
+          "stage": {
+            "label": "Current stage",
+            "options": {
+              "lookingForPlot": "Looking for a plot",
+              "havePlot": "I have a plot",
+              "plotWithPlan": "I have a plot and the urban plan excerpt",
+              "existingBuilding": "Extending or rebuilding an existing building"
+            }
+          },
+          "scope": {
+            "label": "Scope",
+            "hint": "Choose all that apply.",
+            "options": {
+              "permitDesign": "Design and documentation to the building permit",
+              "coordination": "Coordinating engineers and institutions",
+              "interiors": "Interior design as well"
+            }
+          },
+          "start": {
+            "label": "When would you like to start?",
+            "options": {
+              "asap": "As soon as possible",
+              "within3": "Within 3 months",
+              "in3to6": "In 3–6 months",
+              "later": "Later, or not sure yet"
+            }
+          },
+          "budget": {
+            "label": "Approximate construction budget (optional)",
+            "options": {
+              "under150": "Under €150,000",
+              "from150to300": "€150,000–300,000",
+              "from300to1m": "€300,000–1 million",
+              "over1m": "Over €1 million",
+              "unsure": "Not sure yet"
+            }
+          }
+        }
+      },
+      "interiors": {
+        "intro": "For a whole home, an office, a shop or a hospitality space, as a design project or turnkey.",
+        "steps": {
+          "space": "What kind of space?",
+          "site": "Where, and how big?",
+          "stage": "What stage is it at?",
+          "engagement": "How much should we take on?",
+          "timing": "Timing and budget"
+        },
+        "fields": {
+          "space_type": {
+            "label": "Type of space",
+            "options": {
+              "apartment": "Apartment",
+              "house": "House",
+              "office": "Office",
+              "retail": "Shop or hospitality"
+            }
+          },
+          "location": {
+            "label": "Location",
+            "placeholder": "City or municipality"
+          },
+          "area": {
+            "label": "Area"
+          },
+          "stage": {
+            "label": "Current stage",
+            "options": {
+              "construction": "Still under construction",
+              "ready": "New and ready to fit out",
+              "renovation": "Renovating an existing space"
+            }
+          },
+          "engagement": {
+            "label": "Scope",
+            "options": {
+              "design": "Design project",
+              "turnkey": "Turnkey"
+            },
+            "descriptions": {
+              "design": "Complete drawings, specifications and visualizations, for when you'll organize the works yourself.",
+              "turnkey": "We also run the realization \u2014 contractors, suppliers, orders and installation \u2014 through to the finished space."
+            }
+          },
+          "timing": {
+            "label": "When would you like to move in or open?",
+            "options": {
+              "within3": "Within 3 months",
+              "in3to6": "In 3–6 months",
+              "in6to12": "In 6–12 months",
+              "unsure": "Not sure yet"
+            }
+          },
+          "budget": {
+            "label": "Approximate budget for the works and furnishing (optional)",
+            "options": {
+              "under15": "Under €15,000",
+              "from15to40": "€15,000–40,000",
+              "from40to100": "€40,000–100,000",
+              "over100": "Over €100,000",
+              "unsure": "Not sure yet"
+            }
+          }
+        }
+      }
+    },
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "phone": "Phone",
+      "phoneOptional": "Phone (optional)",
+      "message": "Anything else we should know?",
+      "consent": "I agree that Stellar may use these details to reply to my request.",
+      "fileTooLarge": "This file is larger than 7 MB. Please attach a smaller one, or email it to us.",
+      "errorMessage": "Your message couldn't be sent. Please try again, or email us at {email}."
+    },
+    "enquiry": {
+      "label": "Other enquiries",
+      "title": "Something else in mind?",
+      "intro": "Interested in an interior glow-up, a consultation, or something else? Send us a few lines and we'll reply within 24 hours.",
+      "topic": "Topic",
+      "other": "Something else",
+      "message": "How can we help?",
+      "successTitle": "Message sent",
+      "successMessage": "We'll reply within 24 hours."
+    },
+    "studio": {
+      "label": "Studio",
+      "title": "Visit the studio",
+      "address": "Address",
+      "hours": "Opening hours",
+      "email": "Email",
+      "phone": "Phone",
+      "follow": "Follow",
+      "mapTitle": "Map showing the Stellar Architecture studio in Skopje"
+    }
   },
   "notFound": {
     "code": "404",
@@ -129,7 +304,7 @@
     "studioTitle": "Studio",
     "studioDesc": "Learn about Stellar Architecture Studio \u2014 a multidisciplinary design practice founded in Skopje, Macedonia. Meet our team of architects and designers.",
     "contactTitle": "Contact",
-    "contactDesc": "Get in touch with Stellar Architecture Studio. Located at ul. Makedonija 12, 1000 Skopje, Macedonia. We'd love to hear about your project."
+    "contactDesc": "Request a quote for an architecture or interior project, or send us a message. Stellar Architecture Studio, Bulevar Partizanski Odredi 106/1-42, Karposh, Skopje."
   },
   "data": {
     "projects": {
