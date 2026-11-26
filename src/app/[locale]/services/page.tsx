@@ -5,6 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ServiceRow from "@/components/ServiceRow";
 import Button from "@/components/Button";
 import { breadcrumbJsonLd } from "@/lib/metadata";
+import type { Service } from "@/lib/types";
 
 export async function generateMetadata({
   params,
@@ -35,17 +36,22 @@ export default async function ServicesPage({
   const t = await getTranslations("services");
   const ts = await getTranslations("data.services");
 
+  const service = (key: (typeof SERVICES)[number]): Service => ({
+    title: ts(`${key}.title`),
+    tagline: ts(`${key}.tagline`),
+    audience: ts(`${key}.audience`),
+    desc: ts(`${key}.desc`),
+    points: ts.has(`${key}.points`) ? ts.raw(`${key}.points`) : undefined,
+    options: ts.has(`${key}.options`) ? ts.raw(`${key}.options`) : undefined,
+  });
+
   return (
     <div className="pt-16">
       <SectionTitle label={t("label")} title={t("title")} sub={t("sub")} />
 
       <div className="px-[clamp(20px,5vw,72px)] pb-20">
-        {SERVICES.map((s, i) => (
-          <ServiceRow
-            key={i}
-            service={{ title: ts(`${i}.title`), desc: ts(`${i}.desc`) }}
-            index={i}
-          />
+        {SERVICES.map((key, i) => (
+          <ServiceRow key={key} service={service(key)} index={i} />
         ))}
       </div>
 

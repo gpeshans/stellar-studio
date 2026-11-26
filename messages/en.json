@@ -65,10 +65,10 @@
   },
   "services": {
     "label": "Expertise",
-    "title": "What We Do",
-    "sub": "End-to-end architectural services, from concept to handover.",
-    "ctaHeading": "Have a project in mind?",
-    "ctaSub": "We'd love to hear about it.",
+    "title": "Architecture and interiors, with a clearly led process",
+    "sub": "We design houses, residential and commercial buildings, and interiors. Every project is led personally by Brankica, architect and founder of Stellar, with a trusted team of engineers and specialists for each phase.",
+    "ctaHeading": "Planning a house, a building or an interior?",
+    "ctaSub": "Tell us where it is, how big it is, what stage it's at and when you'd like to start \u2014 we'll tell you how we can help.",
     "ctaButton": "Get in Touch"
   },
   "studio": {
@@ -125,7 +125,7 @@
     "projectsTitle": "Projects",
     "projectsDesc": "Browse our complete portfolio of architectural projects \u2014 residential, commercial, cultural, interior, and public spaces across Macedonia.",
     "servicesTitle": "Services",
-    "servicesDesc": "Architectural design, interior design, and consultation services from Stellar Architecture Studio \u2014 full project coordination, documentation, and 3D visualizations for residential, commercial, and public spaces.",
+    "servicesDesc": "Architecture for houses, residential and commercial buildings, interiors from design to turnkey, interior glow-ups and focused consultations. Every project is led personally by Brankica, founder of Stellar.",
     "studioTitle": "Studio",
     "studioDesc": "Learn about Stellar Architecture Studio \u2014 a multidisciplinary design practice founded in Skopje, Macedonia. Meet our team of architects and designers.",
     "contactTitle": "Contact",
@@ -205,17 +205,66 @@
       }
     },
     "services": {
-      "0": {
-        "title": "Architectural Design",
-        "desc": "Complete design and project documentation for residential, commercial, and public buildings \u2014 from concept and feasibility through permits, technical drawings, and on-site coordination."
+      "architecture": {
+        "title": "Architecture",
+        "tagline": "Houses, residential and commercial buildings",
+        "audience": "For families planning their own home, and for investors developing a residential or commercial building.",
+        "desc": "You have one point of contact from the first sketch to the building permit. We take on the coordination, so you can follow the progress without having to manage it.",
+        "points": [
+          "Concept and complete project documentation",
+          "Engineers and specialists for every phase",
+          "All required studies and reports",
+          "Communication with the municipality and institutions, through to the building permit"
+        ],
+        "summary": "One point of contact from the first sketch to the building permit, with the documentation, engineers and institutions coordinated for you."
       },
-      "1": {
-        "title": "Interior Design",
-        "desc": "Bespoke turnkey interiors for new spaces and renovations, delivered with full project documentation and advanced 3D visualizations that let you experience the space before it's built."
+      "interiors": {
+        "title": "Interiors",
+        "tagline": "Design project or turnkey",
+        "audience": "For owners furnishing a whole home, especially an apartment under construction or before a renovation, and for shops, offices and hospitality spaces.",
+        "desc": "We plan the space around how it will be used: the layout, light, materials, furniture and the details that get built. Then you decide how much you hand over.",
+        "options": [
+          {
+            "title": "Design project",
+            "desc": "Complete drawings, specifications and visualizations, for when you'll organize the works yourself."
+          },
+          {
+            "title": "Turnkey",
+            "desc": "We also run the realization \u2014 contractors, suppliers, orders and installation \u2014 through to the finished space."
+          }
+        ],
+        "summary": "A complete interior design, or a turnkey space with the contractors, suppliers and installation coordinated for you."
       },
-      "2": {
-        "title": "Consultation",
-        "desc": "Focused, time-boxed sessions on site, regulation, layout, or material questions \u2014 each one ending with a tailored written brief you can act on independently or hand to your team."
+      "glowUp": {
+        "title": "Interior glow-up",
+        "tagline": "Styling plan or turnkey",
+        "audience": "For a home that needs a refresh or one you've just moved into, a place you're preparing to sell or rent out, and shops, offices or cafés that want a fresh look.",
+        "desc": "An expert designer's eye, without a renovation. Brankica works with the space you already have and brings it to life with colour, light, textiles, decor and art, so it feels new again.",
+        "options": [
+          {
+            "title": "Styling plan",
+            "desc": "A visit to your space, then a clear plan: colour palette, lighting and a shopping list for textiles, decor and art, ready for you to put in place."
+          },
+          {
+            "title": "Turnkey",
+            "desc": "We take care of everything \u2014 sourcing and orders, painters and installers, and a final styling day \u2014 so you come back to a finished space."
+          }
+        ],
+        "summary": "An expert designer refreshes your space with colour, light, textiles and art \u2014 as a plan to follow, or fully turnkey."
+      },
+      "beforeYouBuy": {
+        "title": "Before you buy an apartment",
+        "tagline": "Consultation \u00b7 3 hours",
+        "audience": "For buyers already considering a specific apartment.",
+        "desc": "Together we assess the layout, daylight, storage and what can still be changed, measured against how you actually live. You leave with a short written summary that makes the decision clearer.",
+        "summary": "Three hours on a specific apartment \u2014 layout, daylight, storage \u2014 and a written summary to help you decide."
+      },
+      "dayWithArchitect": {
+        "title": "A day with an architect",
+        "tagline": "Consultation \u00b7 8 hours",
+        "audience": "For clients with a specific interior or house question who plan to carry on themselves.",
+        "desc": "We agree on your questions in advance and dedicate a full day to them: preparation, a working session together, and a clear set of sketches and guidelines for your next steps.",
+        "summary": "A full day dedicated to your questions, with sketches and guidelines so you can carry on yourself."
       }
     },
     "team": {

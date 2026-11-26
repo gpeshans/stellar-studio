@@ -1,6 +1,6 @@
 import { STOCK } from "./images";
 import { slugify } from "./utils";
-import type { Project, CategoryItem, Service, TeamMember } from "./types";
+import type { Project, CategoryItem, TeamMember } from "./types";
 
 export const CATEGORIES: CategoryItem[] = [
   { key: "All", label: "All Projects", img: STOCK.hero1, count: 10 },
@@ -212,20 +212,15 @@ export const PROJECTS: Project[] = RAW_PROJECTS.map((p) => ({
   slug: slugify(p.title),
 }));
 
-export const SERVICES: Service[] = [
-  {
-    title: "Architectural Design",
-    desc: "Complete design and project documentation for residential, commercial, and public buildings — from concept and feasibility through permits, technical drawings, and on-site coordination.",
-  },
-  {
-    title: "Interior Design",
-    desc: "Bespoke turnkey interiors for new spaces and renovations, delivered with full project documentation and advanced 3D visualizations that let you experience the space before it's built.",
-  },
-  {
-    title: "Consultation",
-    desc: "Focused, time-boxed sessions on site, regulation, layout, or material questions — each one ending with a tailored written brief you can act on independently or hand to your team.",
-  },
-];
+// Services in display order. Copy lives in messages/*.json under
+// data.services.<key>, keyed by name so the languages can't drift out of order.
+export const SERVICES = [
+  "architecture",
+  "interiors",
+  "glowUp",
+  "beforeYouBuy",
+  "dayWithArchitect",
+] as const;
 
 export const TEAM: TeamMember[] = [
   { name: "Ana Petrović", role: "Founding Partner", img: STOCK.team1 },

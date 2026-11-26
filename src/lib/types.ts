@@ -27,9 +27,18 @@ export interface CategoryItem {
   count: number;
 }
 
+/** A service as shown on the Services page, already translated. */
 export interface Service {
   title: string;
+  /** Short line under the title: the scope, or a consultation's length. */
+  tagline: string;
+  /** Who the service is for. */
+  audience: string;
   desc: string;
+  /** What's included, as a short list. */
+  points?: string[];
+  /** Ways to take the service, e.g. design project or turnkey. */
+  options?: { title: string; desc: string }[];
 }
 
 export interface TeamMember {

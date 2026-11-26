@@ -7,9 +7,9 @@ export default function ServicePreviewGrid() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-5 border border-gray-5 mx-[var(--pad)] mb-20">
-      {SERVICES.slice(0, 3).map((_, i) => (
+      {SERVICES.slice(0, 3).map((key, i) => (
         <div
-          key={i}
+          key={key}
           className="bg-white hover:bg-bg2 transition-colors duration-400"
           style={{ padding: "clamp(24px, 3vw, 48px)" }}
         >
@@ -17,10 +17,10 @@ export default function ServicePreviewGrid() {
             {padIndex(i)}
           </span>
           <h3 className="font-display text-lg font-semibold mb-2.5 tracking-tight">
-            {t(`${i}.title`)}
+            {t(`${key}.title`)}
           </h3>
           <p className="font-body text-sm font-light leading-[1.7] text-gray-2">
-            {t(`${i}.desc`)}
+            {t(`${key}.summary`)}
           </p>
         </div>
       ))}
