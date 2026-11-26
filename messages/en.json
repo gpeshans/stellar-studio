@@ -299,74 +299,32 @@
   },
   "data": {
     "projects": {
-      "0": {
+      "gia-house": {
         "title": "GIA House",
         "description": "A modern residential house in Berovo, North Macedonia, designed with a focus on natural light and open spaces. The building features a clean, minimalist aesthetic with large windows and a seamless integration of indoor and outdoor living.",
         "location": "Berovo, North Macedonia",
         "category": "Residential",
         "client": "Private"
       },
-      "1": {
+      "brash-fashion": {
         "title": "Brash Fashion",
         "description": "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
         "location": "Shtip, North Macedonia",
         "category": "Commercial",
         "client": "Brash Fashion"
       },
-      "2": {
+      "alb-petrol": {
         "title": "ALB Petrol",
         "description": "Modern petrol station facade defined by clean geometry, a bold cantilevered canopy, and integrated LED lighting for strong day-night visibility. A restrained palette and transparent storefront create a clear, durable, and recognizable architectural identity.",
         "location": "Tetovo, North Macedonia",
         "category": "Commercial",
         "client": "ALB Petrol"
       },
-      "3": {
-        "title": "Stone Garden Villa",
-        "description": "Nestled into a hillside, this residence is composed of three interlocking stone volumes connected by glass bridges. Each volume frames a specific landscape view \u2014 the mountain, the garden, and the sky \u2014 creating a sequence of curated natural experiences.",
-        "location": "Bitola, Macedonia",
+      "sv-weekend-house": {
+        "title": "SV Weekend House",
+        "description": "A weekend house located in the serene countryside of Suvi Laki, North Macedonia. The design emphasizes a strong connection to nature, with large windows framing picturesque views and a spacious deck that extends into the landscape. The interior features a warm, minimalist aesthetic with natural materials and an open floor plan that encourages relaxation and socializing.",
+        "location": "Suvi Laki, North Macedonia",
         "category": "Residential",
-        "client": "Private"
-      },
-      "4": {
-        "title": "The Workshop",
-        "description": "A former textile warehouse transformed into a co-working space that celebrates its industrial heritage. Exposed brick walls and steel trusses contrast with refined insertions of white oak and brass. A double-height library anchors the social heart of the space.",
-        "location": "Tetovo, Macedonia",
-        "category": "Interior",
-        "client": "CreativeLab"
-      },
-      "5": {
-        "title": "Riverbank Promenade",
-        "description": "A 1.2km urban intervention that reconnects the city with its river. Stepped terraces of local travertine descend to the waterline, creating flexible social spaces that accommodate everything from morning joggers to evening concerts.",
-        "location": "Skopje, Macedonia",
-        "category": "Residential",
-        "client": "City of Skopje"
-      },
-      "6": {
-        "title": "Horizon House",
-        "description": "A mountain retreat designed as a single horizontal gesture in the landscape. The elongated plan maximizes views across the valley while a green roof seamlessly merges the building with the alpine meadow above. Rammed earth walls provide thermal mass and a connection to the terrain.",
-        "location": "Mavrovo, Macedonia",
-        "category": "Residential",
-        "client": "Private"
-      },
-      "7": {
-        "title": "Gallery M",
-        "description": "A private art gallery conceived as a sequence of rooms with precisely calibrated proportions and light conditions. Each gallery is tailored to a specific medium \u2014 painting, sculpture, photography \u2014 while a rooftop terrace offers views across the old bazaar.",
-        "location": "Skopje, Macedonia",
-        "category": "Commercial",
-        "client": "Foundation M"
-      },
-      "8": {
-        "title": "Cedar Office Park",
-        "description": "Three low-rise office buildings organized around a shared courtyard garden. The complex prioritizes biophilic design with planted fa\u00e7ades, natural ventilation, and daylit interiors. An underground parking structure preserves the green campus above.",
-        "location": "Skopje, Macedonia",
-        "category": "Commercial",
-        "client": "Cedar Investments"
-      },
-      "9": {
-        "title": "Loft Residence",
-        "description": "A penthouse apartment where raw concrete ceilings and polished terrazzo floors create a refined industrial canvas. Custom walnut joinery defines living zones without partitions. A sculptural steel staircase connects to a private rooftop garden.",
-        "location": "Skopje, Macedonia",
-        "category": "Interior",
         "client": "Private"
       }
     },

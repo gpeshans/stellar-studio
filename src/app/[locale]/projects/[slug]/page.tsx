@@ -28,14 +28,13 @@ export async function generateMetadata({
   if (!project) return {};
 
   const t = await getTranslations({ locale, namespace: "data.projects" });
-  const idx = PROJECTS.indexOf(project);
-  const description = t(`${idx}.description`);
+  const description = t(`${project.slug}.description`);
 
   return {
-    title: t(`${idx}.title`),
+    title: t(`${project.slug}.title`),
     description,
     openGraph: {
-      title: `${t(`${idx}.title`)} | Stellar Architecture Studio`,
+      title: `${t(`${project.slug}.title`)} | Stellar Architecture Studio`,
       description,
       images: [{ url: project.img, width: 1200, height: 800 }],
     },
@@ -50,22 +49,21 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   if (!project) notFound();
 
   const nextProject = getNextProject(PROJECTS, slug);
-  const idx = PROJECTS.indexOf(project);
 
   const t = await getTranslations("data.projects");
 
   return (
     <div className="pt-16">
-      <ProjectDetailHero image={project.gallery[0]} title={t(`${idx}.title`)} />
+      <ProjectDetailHero image={project.gallery[0]} title={t(`${project.slug}.title`)} />
       <ProjectMeta project={project} />
 
-      <ProjectGallery gallery={project.gallery} title={t(`${idx}.title`)} />
+      <ProjectGallery gallery={project.gallery} title={t(`${project.slug}.title`)} />
       <NextProjectCTA project={nextProject} />
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(projectJsonLd(project, locale, t(`${idx}.description`))),
+          __html: JSON.stringify(projectJsonLd(project, locale, t(`${project.slug}.description`))),
         }}
       />
       <script
@@ -75,7 +73,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             breadcrumbJsonLd(locale, [
               { name: "Home", url: "/" },
               { name: "Projects", url: "/projects" },
-              { name: t(`${idx}.title`), url: `/projects/${project.slug}` },
+              { name: t(`${project.slug}.title`), url: `/projects/${project.slug}` },
             ])
           ),
         }}

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Project } from "@/lib/types";
-import { PROJECTS } from "@/lib/data";
 
 interface ProjectCardProps {
   project: Project;
@@ -13,7 +12,6 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, ratio, index }: ProjectCardProps) {
   const tp = useTranslations("data.projects");
   const tc = useTranslations("categories");
-  const idx = PROJECTS.indexOf(project);
 
   return (
     <Link
@@ -24,7 +22,7 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
       <div className="relative overflow-hidden bg-bg2" style={{ aspectRatio: ratio }}>
         <Image
           src={project.img}
-          alt={tp(`${idx}.title`)}
+          alt={tp(`${project.slug}.title`)}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           style={{ transitionTimingFunction: "var(--ease-smooth)" }}
@@ -38,10 +36,10 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
           {tc(project.category)} — {project.year}
         </p>
         <h3 className="font-display text-[clamp(18px,2.2vw,30px)] font-medium tracking-tight mb-1.5">
-          {tp(`${idx}.title`)}
+          {tp(`${project.slug}.title`)}
         </h3>
         <p className="font-body text-sm font-light opacity-60">
-          {tp(`${idx}.location`)}
+          {tp(`${project.slug}.location`)}
         </p>
       </div>
     </Link>

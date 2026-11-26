@@ -28,13 +28,11 @@ export default function Hero() {
   }, [advance]);
 
   const { project } = HEROES[idx];
-  const projectIdx = PROJECTS.indexOf(project);
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
       {/* Slides */}
       {HEROES.map((h, i) => {
-        const hIdx = PROJECTS.indexOf(h.project);
         return (
           <div
             key={i}
@@ -43,7 +41,7 @@ export default function Hero() {
           >
             <Image
               src={h.img}
-              alt={tp(`${hIdx}.title`)}
+              alt={tp(`${h.project.slug}.title`)}
               fill
               className="object-cover brightness-[0.65]"
               style={{
@@ -74,14 +72,14 @@ export default function Hero() {
           key={idx}
           className="font-display text-[clamp(28px,5vw,60px)] font-medium leading-none tracking-tight max-w-[750px] animate-fade-up"
         >
-          {tp(`${projectIdx}.title`)}
+          {tp(`${project.slug}.title`)}
         </h1>
         <p
           key={`${idx}-loc`}
           className="font-body text-sm font-light tracking-[0.03em] opacity-50 mt-3.5 mb-9 animate-fade-up"
           style={{ animationDelay: "0.08s" }}
         >
-          {tp(`${projectIdx}.location`)} — {tp(`${projectIdx}.category`)}
+          {tp(`${project.slug}.location`)} — {tp(`${project.slug}.category`)}
         </p>
 
         <div className="flex items-center gap-8">
@@ -98,8 +96,7 @@ export default function Hero() {
             role="tablist"
             aria-label={tc("heroSlides")}
           >
-            {HEROES.map((_, i) => {
-              const dotIdx = PROJECTS.indexOf(HEROES[i].project);
+            {HEROES.map((h, i) => {
               return (
                 <button
                   key={i}
@@ -114,7 +111,7 @@ export default function Hero() {
                   aria-selected={i === idx}
                   aria-label={tc("slide", {
                     num: i + 1,
-                    title: tp(`${dotIdx}.title`),
+                    title: tp(`${h.project.slug}.title`),
                   })}
                 />
               );

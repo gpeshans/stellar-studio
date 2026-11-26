@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Project } from "@/lib/types";
-import { PROJECTS } from "@/lib/data";
 
 interface ProjectMetaProps {
   project: Project;
@@ -10,14 +9,13 @@ interface ProjectMetaProps {
 export default function ProjectMeta({ project }: ProjectMetaProps) {
   const t = useTranslations("project");
   const tp = useTranslations("data.projects");
-  const idx = PROJECTS.indexOf(project);
 
   const META_FIELDS = [
-    { label: t("location"), value: tp(`${idx}.location`) },
+    { label: t("location"), value: tp(`${project.slug}.location`) },
     { label: t("year"), value: project.year },
     { label: t("area"), value: project.area || "/" },
-    { label: t("category"), value: tp(`${idx}.category`) },
-    { label: t("client"), value: tp(`${idx}.client`) },
+    { label: t("category"), value: tp(`${project.slug}.category`) },
+    { label: t("client"), value: tp(`${project.slug}.client`) },
   ];
 
   return (
@@ -30,7 +28,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
           {t("allProjects")}
         </Link>
         <h1 className="font-display text-[clamp(32px,5vw,60px)] font-medium leading-[1.05] tracking-tight">
-          {tp(`${idx}.title`)}
+          {tp(`${project.slug}.title`)}
         </h1>
       </div>
       <div className="flex gap-10 flex-wrap justify-center pt-8">
