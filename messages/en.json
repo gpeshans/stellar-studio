@@ -76,11 +76,21 @@
   "studio": {
     "label": "About",
     "title": "The Studio",
+    "founder": {
+      "role": "Architect & founder",
+      "name": "Brankica",
+      "paragraph1": "She runs every Stellar project herself, from the first conversation to the final detail on site, and is part of every decision along the way. So there's always someone who knows your project as well as you do.",
+      "paragraph2": "Above all, she keeps the whole team focused on the people we design for: how you live and work, what you need and what you hope for. For us, a project is only finished when it truly feels like yours.",
+      "photoAlt": "Brankica, architect and founder of Stellar"
+    },
     "tagline": "Great architecture is born from listening \u2014 to the site, to the light, and above all, to the people.",
     "paragraph1": "Stellar was founded with a simple conviction: every project, regardless of scale, deserves the same depth of thought and care. From private residences to public institutions, we approach each commission as an opportunity to create spaces that elevate everyday life.",
     "paragraph2": "Our studio combines rigorous technical expertise with a deep sensitivity to context, materiality, and human experience. We work collaboratively with clients, engineers, and craftspeople to realize designs that are both ambitious and enduring.",
-    "teamLabel": "People",
-    "teamTitle": "Our Team"
+    "collaborators": {
+      "label": "Collaborators",
+      "title": "Who we work with",
+      "sub": "Engineers, furniture makers and partner studios we trust with every phase of a project."
+    }
   },
   "contact": {
     "label": "Contact",
@@ -279,10 +289,10 @@
     "Interior": "Interior"
   },
   "stats": {
-    "stat0": "Projects",
-    "stat1": "Years",
-    "stat2": "Team Members",
-    "stat3": "Countries"
+    "established": "Established",
+    "projects": "Projects",
+    "countries": "Countries",
+    "collaborators": "Collaborators"
   },
   "metadata": {
     "defaultTitle": "Stellar Architecture Studio \u2014 Skopje, Macedonia",
@@ -293,7 +303,7 @@
     "servicesTitle": "Services",
     "servicesDesc": "Architecture for houses, residential and commercial buildings, interiors from design to turnkey, focused consultations and interior glow-ups. Every project is led personally by Brankica, founder of Stellar.",
     "studioTitle": "Studio",
-    "studioDesc": "Learn about Stellar Architecture Studio \u2014 a multidisciplinary design practice founded in Skopje, Macedonia. Meet our team of architects and designers.",
+    "studioDesc": "Stellar was founded in Skopje in 2021. Meet Brankica, the architect who personally leads every project, and the collaborators we work with.",
     "contactTitle": "Contact",
     "contactDesc": "Request a quote for an architecture or interior project, or send us a message. Stellar Architecture Studio, Bulevar Partizanski Odredi 106/1-42, Karposh, Skopje."
   },
@@ -390,12 +400,6 @@
         "desc": "We agree on your questions in advance and dedicate a full day to them: preparation, a working session together, and a clear set of sketches and guidelines for your next steps.",
         "summary": "A full day dedicated to your questions, with sketches and guidelines so you can carry on yourself."
       }
-    },
-    "team": {
-      "0": { "role": "Founding Partner" },
-      "1": { "role": "Design Director" },
-      "2": { "role": "Lead Architect" },
-      "3": { "role": "Project Manager" }
     }
   }
 }

@@ -41,8 +41,13 @@ export interface Service {
   options?: { title: string; desc: string }[];
 }
 
-export interface TeamMember {
+/** A studio or firm we work with, shown by its logo on the Studio page. */
+export interface Collaborator {
   name: string;
-  role: string;
-  img: string;
+  url: string;
+  /**
+   * Black on transparent, trimmed to the artwork; size in pixels. `scale`
+   * nudges a logo that still looks too small (or large) next to the others.
+   */
+  logo: { src: string; width: number; height: number; scale?: number };
 }

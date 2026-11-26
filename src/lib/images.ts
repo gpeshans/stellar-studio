@@ -49,11 +49,7 @@ export const STOCK = {
   catInterior: unsplash("1618221195710-dd6b41faaea6", 800, 1000),
   catPublic: unsplash("1506905925346-21bda4d32df4", 800, 1000),
 
-  // Studio / Team
+  // Studio
   studio1: unsplash("1497366811353-6870744d04b2", 1200, 800),
   studio2: unsplash("1497366216548-37526070297c", 800, 1000),
-  team1: unsplash("1560250097-0b93528c311a", 400, 500),
-  team2: unsplash("1472099645785-5658abf4ff4e", 400, 500),
-  team3: unsplash("1580489944761-15a19d654956", 400, 500),
-  team4: unsplash("1507003211169-0a1dd7228f2d", 400, 500),
 };

@@ -1,6 +1,6 @@
 import { STOCK } from "./images";
 import { slugify } from "./utils";
-import type { Project, CategoryItem, TeamMember } from "./types";
+import type { Project, CategoryItem, Collaborator } from "./types";
 
 export const CATEGORIES: CategoryItem[] = [
   { key: "All", label: "All Projects", img: STOCK.hero1, count: 10 },
@@ -228,16 +228,32 @@ export function serviceAnchor(key: ServiceKey) {
   return key.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 }
 
-export const TEAM: TeamMember[] = [
-  { name: "Ana Petrović", role: "Founding Partner", img: STOCK.team1 },
-  { name: "Marko Dimitrov", role: "Design Director", img: STOCK.team2 },
-  { name: "Elena Stojanova", role: "Lead Architect", img: STOCK.team3 },
-  { name: "Stefan Iliev", role: "Project Manager", img: STOCK.team4 },
-];
-
+// The figures on the Studio page. Labels live in messages/*.json under
+// stats.<key>.
 export const STATS = [
-  { number: "45+", label: "Projects" },
-  { number: "12", label: "Years" },
-  { number: "8", label: "Team Members" },
-  { number: "6", label: "Countries" },
+  { key: "established", value: "2021" },
+  { key: "projects", value: "40+" },
+  { key: "countries", value: "6" },
+  { key: "collaborators", value: "10+" },
+] as const;
+
+// Logos are black on transparent, trimmed to the artwork, with their pixel
+// size, so the Studio page can scale them all to the same visual weight.
+export const COLLABORATORS: Collaborator[] = [
+  {
+    name: "Lesnina Mi",
+    url: "https://lesninami.com.mk/",
+    logo: { src: "/images/collaborators/lesninami.png", width: 519, height: 144 },
+  },
+  {
+    name: "Stamboliski Engineering",
+    url: "https://www.instagram.com/stamboliski_engineering/",
+    // The wordmark is small next to the column, so it needs a little more room.
+    logo: { src: "/images/collaborators/stamboliski.png", width: 664, height: 205, scale: 1.12 },
+  },
+  {
+    name: "FORU Studio",
+    url: "https://www.forustudio.com/",
+    logo: { src: "/images/collaborators/foru.png", width: 510, height: 96 },
+  },
 ];
