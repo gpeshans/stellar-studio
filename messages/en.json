@@ -38,7 +38,8 @@
     "recentProjects": "Recent Projects",
     "recentProjectsSub": "A curated selection of our latest residential, interior, and commercial work.",
     "expertise": "Expertise",
-    "services": "Services"
+    "services": "Services",
+    "serviceLink": "Learn more"
   },
   "about": {
     "label": "About Us",
@@ -84,12 +85,12 @@
   "contact": {
     "label": "Contact",
     "title": "Let's talk about your project",
-    "intro": "Tell us what you're planning and Brankica will prepare a quote within 24 hours. For anything else, send us a few lines.",
+    "intro": "Tell us what you're planning and we'll prepare a quote within 72 hours. For anything else, send us a few lines.",
     "jump": {
       "label": "On this page",
       "quote": "Request a quote",
       "enquiry": "Other enquiries",
-      "studio": "Visit the studio"
+      "studio": "Contact information"
     },
     "quote": {
       "label": "Request a quote",
@@ -103,9 +104,9 @@
       "chooseFile": "Choose file",
       "noFile": "No file chosen",
       "submit": "Request a quote",
-      "note": "Brankica prepares every quote personally and replies within 24 hours.",
+      "note": "We prepare every quote personally and reply within 72 hours.",
       "successTitle": "Thank you",
-      "successMessage": "Your request is with Brankica. You'll receive your quote within 24 hours.",
+      "successMessage": "We've received your request. You'll have your quote within 72 hours.",
       "architecture": {
         "intro": "For a family house, or a residential or commercial building, from the first sketch to the building permit.",
         "steps": {
@@ -113,7 +114,7 @@
           "site": "Where, and how big?",
           "stage": "Where are you now?",
           "scope": "What should we take on?",
-          "timing": "Timing and budget"
+          "timing": "When would you like to start?"
         },
         "fields": {
           "project_type": {
@@ -140,8 +141,7 @@
             "options": {
               "lookingForPlot": "Looking for a plot",
               "havePlot": "I have a plot",
-              "plotWithPlan": "I have a plot and the urban plan excerpt",
-              "existingBuilding": "Extending or rebuilding an existing building"
+              "plotWithPlan": "I have a plot and the urban plan excerpt"
             }
           },
           "scope": {
@@ -160,16 +160,6 @@
               "within3": "Within 3 months",
               "in3to6": "In 3–6 months",
               "later": "Later, or not sure yet"
-            }
-          },
-          "budget": {
-            "label": "Approximate construction budget (optional)",
-            "options": {
-              "under150": "Under €150,000",
-              "from150to300": "€150,000–300,000",
-              "from300to1m": "€300,000–1 million",
-              "over1m": "Over €1 million",
-              "unsure": "Not sure yet"
             }
           }
         }
@@ -254,7 +244,7 @@
     "enquiry": {
       "label": "Other enquiries",
       "title": "Something else in mind?",
-      "intro": "Interested in an interior glow-up, a consultation, or something else? Send us a few lines and we'll reply within 24 hours.",
+      "intro": "Interested in a consultation, an interior glow-up, or something else? Send us a few lines and we'll reply within 24 hours.",
       "topic": "Topic",
       "other": "Something else",
       "message": "How can we help?",
@@ -263,9 +253,10 @@
     },
     "studio": {
       "label": "Studio",
-      "title": "Visit the studio",
+      "title": "Contact information",
+      "note": "Our new office opens soon. Until then, we're happy to talk by phone or email.",
       "address": "Address",
-      "hours": "Opening hours",
+      "hours": "Working hours",
       "email": "Email",
       "phone": "Phone",
       "follow": "Follow",
@@ -300,7 +291,7 @@
     "projectsTitle": "Projects",
     "projectsDesc": "Browse our complete portfolio of architectural projects \u2014 residential, commercial, cultural, interior, and public spaces across Macedonia.",
     "servicesTitle": "Services",
-    "servicesDesc": "Architecture for houses, residential and commercial buildings, interiors from design to turnkey, interior glow-ups and focused consultations. Every project is led personally by Brankica, founder of Stellar.",
+    "servicesDesc": "Architecture for houses, residential and commercial buildings, interiors from design to turnkey, focused consultations and interior glow-ups. Every project is led personally by Brankica, founder of Stellar.",
     "studioTitle": "Studio",
     "studioDesc": "Learn about Stellar Architecture Studio \u2014 a multidisciplinary design practice founded in Skopje, Macedonia. Meet our team of architects and designers.",
     "contactTitle": "Contact",
@@ -414,7 +405,7 @@
         "title": "Interior glow-up",
         "tagline": "Styling plan or turnkey",
         "audience": "For a home that needs a refresh or one you've just moved into, a place you're preparing to sell or rent out, and shops, offices or cafés that want a fresh look.",
-        "desc": "An expert designer's eye, without a renovation. Brankica works with the space you already have and brings it to life with colour, light, textiles, decor and art, so it feels new again.",
+        "desc": "An expert designer's eye, without a renovation. We work with the space you already have and bring it to life with colour, light, textiles, decor and art, so it feels new again.",
         "options": [
           {
             "title": "Styling plan",

@@ -1,6 +1,4 @@
-import type { SERVICES } from "./data";
-
-type ServiceKey = (typeof SERVICES)[number];
+import type { ServiceKey } from "./data";
 
 /** Services quoted through a calculator on the Contact page. */
 export const QUOTE_SERVICES = ["architecture", "interiors"] as const;
@@ -8,9 +6,9 @@ export type QuoteService = (typeof QUOTE_SERVICES)[number];
 
 /** Topics of the general enquiry form: the other services, plus anything else. */
 export const ENQUIRY_TOPICS = [
+  "dayWithArchitect",
   "glowUp",
   "beforeYouBuy",
-  "dayWithArchitect",
   "other",
 ] as const;
 export type EnquiryTopic = (typeof ENQUIRY_TOPICS)[number];

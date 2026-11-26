@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { SERVICES } from "@/lib/data";
+import { SERVICES, serviceAnchor, type ServiceKey } from "@/lib/data";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceRow from "@/components/ServiceRow";
 import Button from "@/components/Button";
@@ -37,7 +37,7 @@ export default async function ServicesPage({
   const t = await getTranslations("services");
   const ts = await getTranslations("data.services");
 
-  const service = (key: (typeof SERVICES)[number]): Service => ({
+  const service = (key: ServiceKey): Service => ({
     title: ts(`${key}.title`),
     tagline: ts(`${key}.tagline`),
     audience: ts(`${key}.audience`),
@@ -54,6 +54,7 @@ export default async function ServicesPage({
         {SERVICES.map((key, i) => (
           <ServiceRow
             key={key}
+            id={serviceAnchor(key)}
             service={service(key)}
             index={i}
             cta={{

@@ -62,7 +62,7 @@ export const QUOTE_FORMS: Record<
           {
             kind: "choice",
             name: "stage",
-            options: ["lookingForPlot", "havePlot", "plotWithPlan", "existingBuilding"],
+            options: ["lookingForPlot", "havePlot", "plotWithPlan"],
             required: true,
           },
         ],
@@ -86,11 +86,6 @@ export const QUOTE_FORMS: Record<
             name: "start",
             options: ["asap", "within3", "in3to6", "later"],
             required: true,
-          },
-          {
-            kind: "choice",
-            name: "budget",
-            options: ["under150", "from150to300", "from300to1m", "over1m", "unsure"],
           },
         ],
       },

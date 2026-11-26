@@ -217,10 +217,16 @@ export const PROJECTS: Project[] = RAW_PROJECTS.map((p) => ({
 export const SERVICES = [
   "architecture",
   "interiors",
+  "dayWithArchitect",
   "glowUp",
   "beforeYouBuy",
-  "dayWithArchitect",
 ] as const;
+export type ServiceKey = (typeof SERVICES)[number];
+
+/** A service's anchor on the Services page, e.g. "day-with-architect". */
+export function serviceAnchor(key: ServiceKey) {
+  return key.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
+}
 
 export const TEAM: TeamMember[] = [
   { name: "Ana Petrović", role: "Founding Partner", img: STOCK.team1 },

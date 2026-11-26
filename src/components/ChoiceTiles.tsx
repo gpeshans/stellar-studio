@@ -16,10 +16,12 @@ interface ChoiceTilesProps {
   onSelect?: (key: string) => void;
 }
 
-// Static class names so Tailwind can see them.
+// Static class names so Tailwind can see them. From md to lg the quote steps
+// put the tiles in a narrow column, where three across leave ~130px a tile and
+// longer (especially Macedonian) words overflow, so three options stack there.
 const COLUMNS: Record<number, string> = {
   2: "sm:grid-cols-2",
-  3: "sm:grid-cols-3",
+  3: "sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3",
   4: "sm:grid-cols-2 xl:grid-cols-4",
   5: "sm:grid-cols-3 xl:grid-cols-5",
 };

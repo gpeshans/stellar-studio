@@ -16,9 +16,12 @@ export default function StudioDetails() {
   return (
     <section id="studio" className="scroll-mt-20 border-t border-gray-5 px-[var(--pad)] py-24">
       <SectionLabel>{t("label")}</SectionLabel>
-      <h2 className="font-display text-[clamp(28px,3.4vw,44px)] font-bold leading-[1.1] tracking-tight mb-12">
+      <h2 className="font-display text-[clamp(28px,3.4vw,44px)] font-bold leading-[1.1] tracking-tight">
         {t("title")}
       </h2>
+      <p className="font-body text-base font-light text-gray-2 mt-4 mb-12 max-w-[420px]">
+        {t("note")}
+      </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-9 content-start">
