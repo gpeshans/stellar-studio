@@ -14,7 +14,7 @@ export default function ProjectDetailHero({ image, title }: ProjectDetailHeroPro
         fill
         className="object-cover"
         sizes="100vw"
-        priority
+        preload
       />
     </div>
   );

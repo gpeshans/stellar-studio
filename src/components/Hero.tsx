@@ -51,7 +51,7 @@ export default function Hero() {
                   i === idx ? "hero-slow 10s ease-out forwards" : "none",
               }}
               sizes="100vw"
-              priority={i === 0}
+              preload={i === 0}
               loading={i === 0 ? undefined : "eager"}
             />
           </div>
