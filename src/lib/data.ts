@@ -9,9 +9,8 @@ type ProjectEntry = Omit<Project, "cover" | "images"> & {
   cover: string;
 };
 
-// Projects in display order: the first four are featured on the home page.
-// Images come from originals/projects/<slug>/ via `npm run images`; text is in
-// messages/*.json under data.projects.<slug>.
+// Projects in display order. Images come from originals/projects/<slug>/ via
+// `npm run images`; text is in messages/*.json under data.projects.<slug>.
 const ENTRIES: ProjectEntry[] = [
   { slug: "gia-house", category: "architecture", type: "house", year: "2020", area: "500 m²", cover: "4.jpg" },
   { slug: "brash-fashion", category: "interiors", type: "boutique", year: "2022", area: "100 m²", cover: "4.jpg" },
@@ -29,18 +28,39 @@ const ENTRIES: ProjectEntry[] = [
 
 const IMAGES: Record<string, ProjectImage[]> = projectImages;
 
+/** One image of a project by file name, e.g. projectImage("gia-house", "5.jpg"). */
+export function projectImage(slug: string, file: string): ProjectImage {
+  const image = IMAGES[slug]?.find((i) => i.src.endsWith(`/${file}`));
+  if (!image) throw new Error(`${slug}: no image ${file}; run npm run images?`);
+  return image;
+}
+
 export const PROJECTS: Project[] = ENTRIES.map(({ cover: coverFile, ...entry }) => {
-  const all = IMAGES[entry.slug] ?? [];
-  const cover = all.find((image) => image.src.endsWith(`/${coverFile}`));
-  if (!cover) {
-    throw new Error(`${entry.slug}: no image ${coverFile}; run npm run images?`);
-  }
-  return { ...entry, cover, images: [cover, ...all.filter((image) => image !== cover)] };
+  const cover = projectImage(entry.slug, coverFile);
+  const others = IMAGES[entry.slug].filter((image) => image !== cover);
+  return { ...entry, cover, images: [cover, ...others] };
 });
 
 export function getProject(slug: string) {
   return PROJECTS.find((project) => project.slug === slug);
 }
+
+function projectsBySlug(slugs: string[]) {
+  return slugs.map((slug) => {
+    const project = getProject(slug);
+    if (!project) throw new Error(`No project ${slug}`);
+    return project;
+  });
+}
+
+/** The home page: the hero's slides, then the projects in its grid. */
+export const HERO_PROJECTS = projectsBySlug(["gia-house", "gp-apartment", "sv-weekend-house"]);
+export const FEATURED_PROJECTS = projectsBySlug([
+  "gia-house",
+  "gp-apartment",
+  "sv-weekend-house",
+  "spk-apartment",
+]);
 
 /** The project after this one, wrapping around: the "Next project" link. */
 export function nextProject(slug: string) {
@@ -64,8 +84,14 @@ export function serviceAnchor(key: ServiceKey) {
   return key.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 }
 
-// The figures on the Studio page. Labels live in messages/*.json under
-// stats.<key>.
+/** The image beside each main service on the home page. */
+export const SERVICE_IMAGES: Record<ProjectCategory, ProjectImage> = {
+  architecture: projectImage("gia-house", "5.jpg"),
+  interiors: projectImage("mds-apartment", "1mds.jpg"),
+};
+
+// The figures on the Studio and home pages. Labels live in messages/*.json
+// under stats.<key>.
 export const STATS = [
   { key: "established", value: "2021" },
   { key: "projects", value: "40+" },

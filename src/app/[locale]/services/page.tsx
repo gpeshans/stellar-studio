@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SERVICES, serviceAnchor, type ServiceKey } from "@/lib/data";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceRow from "@/components/ServiceRow";
-import Button from "@/components/Button";
+import ContactCTA from "@/components/ContactCTA";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 import { contactHref, isQuoteService } from "@/lib/enquiry";
 import type { Service } from "@/lib/types";
@@ -65,18 +65,7 @@ export default async function ServicesPage({
         ))}
       </div>
 
-      {/* CTA */}
-      <div className="text-center py-20 px-6 bg-black text-white">
-        <h2 className="font-display text-[clamp(26px,4vw,44px)] font-bold tracking-tight mb-4">
-          {t("ctaHeading")}
-        </h2>
-        <p className="font-body text-[15px] font-light text-gray-3 mb-9">
-          {t("ctaSub")}
-        </p>
-        <Button href="/contact" variant="inverted">
-          {t("ctaButton")}
-        </Button>
-      </div>
+      <ContactCTA />
 
       <script
         type="application/ld+json"

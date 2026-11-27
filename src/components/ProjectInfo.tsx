@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { contactHref } from "@/lib/enquiry";
+import ArrowLink from "./ArrowLink";
 import type { Project } from "@/lib/types";
 
 const FACT = "py-3 border-b border-gray-5";
@@ -64,15 +65,9 @@ export default function ProjectInfo({ project }: { project: Project }) {
 
       <div className="mt-10">
         <p className="font-display text-lg font-semibold tracking-tight">{t("similarHeading")}</p>
-        <Link
-          href={contactHref(project.category)}
-          className="group mt-3 inline-flex items-center gap-2.5 border-b border-black pb-1 font-body text-xs font-medium tracking-[0.1em] uppercase text-black"
-        >
+        <ArrowLink href={contactHref(project.category)} className="mt-3">
           {t("requestQuote")}
-          <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </Link>
+        </ArrowLink>
       </div>
     </div>
   );

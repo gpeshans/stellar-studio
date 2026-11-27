@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { CONTACT } from "@/lib/contact";
 
-const NAV_KEYS = ["projects", "studio", "services", "contact"] as const;
+const NAV_KEYS = ["projects", "services", "studio", "contact"] as const;
 const HOVER = "hover:text-black transition-colors duration-300";
 
 export default function Footer() {
@@ -35,7 +35,7 @@ export default function Footer() {
           {NAV_KEYS.map((key) => (
             <Link
               key={key}
-              href={`/${key === "studio" ? "studio" : key}`}
+              href={`/${key}`}
               className="block font-body text-sm font-light text-gray-2 mb-2.5 hover:text-black transition-colors duration-300 cursor-pointer"
             >
               {tn(key)}

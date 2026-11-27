@@ -8,8 +8,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const NAV_KEYS = [
   { href: "/", key: "home" },
   { href: "/projects", key: "projects" },
-  { href: "/studio", key: "studio" },
   { href: "/services", key: "services" },
+  { href: "/studio", key: "studio" },
   { href: "/contact", key: "contact" },
 ] as const;
 

@@ -34,18 +34,25 @@
     "legal": "Privacy \u00b7 Terms"
   },
   "home": {
+    "hero": {
+      "title": "Architecture and interiors, designed around the way you live.",
+      "sub": "Houses, apartments and commercial spaces, led personally by Brankica from the first sketch to the last detail.",
+      "scroll": "Scroll down"
+    },
+    "intro": {
+      "label": "The studio",
+      "heading": "Architecture should serve the people who inhabit it",
+      "paragraph": "Stellar was founded in Skopje in 2021 by architect Brankica. She leads every project herself, from the first conversation to the last detail on site, with a trusted team of engineers, makers and partner studios for each phase.",
+      "link": "Meet the studio"
+    },
     "selectedWork": "Selected Work",
-    "recentProjects": "Recent Projects",
-    "recentProjectsSub": "A curated selection of our latest residential, interior, and commercial work.",
+    "featuredProjects": "Featured Projects",
+    "featuredProjectsSub": "A selection of our architecture and interior work.",
     "expertise": "Expertise",
     "services": "Services",
+    "viewProjects": "View projects",
+    "moreServices": "More ways we can help",
     "serviceLink": "Learn more"
-  },
-  "about": {
-    "label": "About Us",
-    "heading": "Architecture should serve the people who inhabit it",
-    "paragraph": "Founded in Skopje, Stellar is a multidisciplinary studio driven by a commitment to thoughtful design, material honesty, and lasting relationships with our clients and communities.",
-    "button": "The Studio"
   },
   "projects": {
     "label": "Portfolio",
@@ -73,8 +80,7 @@
     "ctaHeading": "Planning a house, a building or an interior?",
     "ctaSub": "Tell us where it is, how big it is, what stage it's at and when you'd like to start \u2014 we'll tell you how we can help.",
     "requestQuote": "Request a quote",
-    "sendEnquiry": "Send an enquiry",
-    "ctaButton": "Get in Touch"
+    "sendEnquiry": "Send an enquiry"
   },
   "studio": {
     "label": "About",
