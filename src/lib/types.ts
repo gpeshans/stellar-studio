@@ -1,30 +1,40 @@
-export interface Project {
-  id: number;
-  title: string;
-  slug: string;
-  location: string;
-  category: Category;
-  year: string;
-  area?: string;
-  client?: string;
-  img: string;
-  gallery: string[];
-  description: string;
+/** The two groups on the Projects page, one per quote calculator. */
+export type ProjectCategory = "architecture" | "interiors";
+
+/** What was designed, e.g. an apartment. Labels: messages projectTypes.<type>. */
+export type ProjectType =
+  | "house"
+  | "weekendHouse"
+  | "petrolStation"
+  | "boutique"
+  | "apartment"
+  | "kidsRoom";
+
+/** A web image made by `npm run images`, with its size in pixels. */
+export interface ProjectImage {
+  /** Watermarked, for showing whole. */
+  src: string;
+  /** Without the watermark and smaller, for places that crop it. */
+  plain: string;
+  width: number;
+  height: number;
 }
 
-export type Category =
-  | "All"
-  | "Residential"
-  | "Cultural"
-  | "Commercial"
-  | "Interior"
-  | "Public";
-
-export interface CategoryItem {
-  key: Category;
-  label: string;
-  img: string;
-  count: number;
+/**
+ * A project. Its title, description, location and client are in
+ * messages/*.json under data.projects.<slug>; location and client are left
+ * out where we don't know them.
+ */
+export interface Project {
+  slug: string;
+  category: ProjectCategory;
+  type: ProjectType;
+  year?: string;
+  area?: string;
+  /** The image on cards and when shared. */
+  cover: ProjectImage;
+  /** Every image of the project, cover first. */
+  images: ProjectImage[];
 }
 
 /** A service as shown on the Services page, already translated. */

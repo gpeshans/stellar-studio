@@ -71,23 +71,27 @@ export function breadcrumbJsonLd(
   };
 }
 
-export function projectJsonLd(project: Project, locale: string, translatedDescription?: string) {
+/** Structured data for a project page, in the page's language. */
+export function projectJsonLd(
+  project: Project,
+  locale: string,
+  text: { title: string; description: string; type: string; location?: string }
+) {
   return {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    name: project.title,
-    description: translatedDescription || project.description,
-    image: project.img,
+    name: text.title,
+    description: text.description,
+    image: project.images.map((image) => `${SITE_URL}${image.src}`),
     url: `${SITE_URL}/${locale}/projects/${project.slug}`,
     creator: {
       "@type": "Organization",
       name: SITE_NAME,
     },
-    locationCreated: {
-      "@type": "Place",
-      name: project.location,
-    },
-    dateCreated: project.year,
-    genre: project.category,
+    ...(text.location && {
+      locationCreated: { "@type": "Place", name: text.location },
+    }),
+    ...(project.year && { dateCreated: project.year }),
+    genre: text.type,
   };
 }

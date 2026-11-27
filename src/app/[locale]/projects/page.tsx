@@ -1,7 +1,8 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import SectionTitle from "@/components/SectionTitle";
-import CategoryNav from "@/components/CategoryNav";
+import ProjectBrowser, { ProjectList } from "@/components/ProjectBrowser";
 import { breadcrumbJsonLd } from "@/lib/metadata";
 
 export async function generateMetadata({
@@ -35,8 +36,10 @@ export default async function ProjectsPage({
   return (
     <div className="pt-16">
       <SectionTitle label={t("label")} title={t("title")} sub={t("sub")} />
-      <CategoryNav />
-      <div className="h-20" />
+      {/* The filter reads the address, which the static page can't know. */}
+      <Suspense fallback={<ProjectList category={null} />}>
+        <ProjectBrowser />
+      </Suspense>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

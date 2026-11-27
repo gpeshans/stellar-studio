@@ -1,0 +1,582 @@
+{
+  "ae-kids-room": [
+    {
+      "src": "/images/projects/ae-kids-room/1.jpg",
+      "plain": "/images/projects/ae-kids-room/plain/1.jpg",
+      "width": 2040,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/ae-kids-room/2.jpg",
+      "plain": "/images/projects/ae-kids-room/plain/2.jpg",
+      "width": 2400,
+      "height": 2040
+    },
+    {
+      "src": "/images/projects/ae-kids-room/3.jpg",
+      "plain": "/images/projects/ae-kids-room/plain/3.jpg",
+      "width": 2400,
+      "height": 2040
+    },
+    {
+      "src": "/images/projects/ae-kids-room/4.jpg",
+      "plain": "/images/projects/ae-kids-room/plain/4.jpg",
+      "width": 2040,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/ae-kids-room/5.jpg",
+      "plain": "/images/projects/ae-kids-room/plain/5.jpg",
+      "width": 2040,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/ae-kids-room/6.jpg",
+      "plain": "/images/projects/ae-kids-room/plain/6.jpg",
+      "width": 1680,
+      "height": 2400
+    }
+  ],
+  "alb-petrol": [
+    {
+      "src": "/images/projects/alb-petrol/1.jpg",
+      "plain": "/images/projects/alb-petrol/plain/1.jpg",
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "brash-fashion": [
+    {
+      "src": "/images/projects/brash-fashion/1.jpg",
+      "plain": "/images/projects/brash-fashion/plain/1.jpg",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/brash-fashion/2.jpg",
+      "plain": "/images/projects/brash-fashion/plain/2.jpg",
+      "width": 2400,
+      "height": 942
+    },
+    {
+      "src": "/images/projects/brash-fashion/3.jpg",
+      "plain": "/images/projects/brash-fashion/plain/3.jpg",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/brash-fashion/4.jpg",
+      "plain": "/images/projects/brash-fashion/plain/4.jpg",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "/images/projects/brash-fashion/5.jpg",
+      "plain": "/images/projects/brash-fashion/plain/5.jpg",
+      "width": 2400,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/brash-fashion/6.jpg",
+      "plain": "/images/projects/brash-fashion/plain/6.jpg",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/brash-fashion/7.jpg",
+      "plain": "/images/projects/brash-fashion/plain/7.jpg",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "/images/projects/brash-fashion/8.jpg",
+      "plain": "/images/projects/brash-fashion/plain/8.jpg",
+      "width": 2400,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/brash-fashion/9.jpg",
+      "plain": "/images/projects/brash-fashion/plain/9.jpg",
+      "width": 2000,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/brash-fashion/10.jpg",
+      "plain": "/images/projects/brash-fashion/plain/10.jpg",
+      "width": 1600,
+      "height": 2400
+    }
+  ],
+  "dkk-apartment": [
+    {
+      "src": "/images/projects/dkk-apartment/1dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/1dk.jpg",
+      "width": 1500,
+      "height": 1380
+    },
+    {
+      "src": "/images/projects/dkk-apartment/2dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/2dk.jpg",
+      "width": 1500,
+      "height": 1380
+    },
+    {
+      "src": "/images/projects/dkk-apartment/3dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/3dk.jpg",
+      "width": 1500,
+      "height": 1380
+    },
+    {
+      "src": "/images/projects/dkk-apartment/4dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/4dk.jpg",
+      "width": 1500,
+      "height": 1380
+    },
+    {
+      "src": "/images/projects/dkk-apartment/5dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/5dk.jpg",
+      "width": 1400,
+      "height": 1012
+    },
+    {
+      "src": "/images/projects/dkk-apartment/6dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/6dk.jpg",
+      "width": 1346,
+      "height": 1012
+    },
+    {
+      "src": "/images/projects/dkk-apartment/7dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/7dk.jpg",
+      "width": 1100,
+      "height": 1288
+    },
+    {
+      "src": "/images/projects/dkk-apartment/8dk.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/8dk.jpg",
+      "width": 1100,
+      "height": 1288
+    },
+    {
+      "src": "/images/projects/dkk-apartment/hodnik-1.jpg",
+      "plain": "/images/projects/dkk-apartment/plain/hodnik-1.jpg",
+      "width": 1100,
+      "height": 1288
+    }
+  ],
+  "gia-house": [
+    {
+      "src": "/images/projects/gia-house/1.jpg",
+      "plain": "/images/projects/gia-house/plain/1.jpg",
+      "width": 1300,
+      "height": 999
+    },
+    {
+      "src": "/images/projects/gia-house/2.jpg",
+      "plain": "/images/projects/gia-house/plain/2.jpg",
+      "width": 1300,
+      "height": 999
+    },
+    {
+      "src": "/images/projects/gia-house/3.jpg",
+      "plain": "/images/projects/gia-house/plain/3.jpg",
+      "width": 1300,
+      "height": 999
+    },
+    {
+      "src": "/images/projects/gia-house/4.jpg",
+      "plain": "/images/projects/gia-house/plain/4.jpg",
+      "width": 1300,
+      "height": 999
+    },
+    {
+      "src": "/images/projects/gia-house/5.jpg",
+      "plain": "/images/projects/gia-house/plain/5.jpg",
+      "width": 1300,
+      "height": 999
+    }
+  ],
+  "gp-apartment": [
+    {
+      "src": "/images/projects/gp-apartment/0.jpg",
+      "plain": "/images/projects/gp-apartment/plain/0.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/1.jpg",
+      "plain": "/images/projects/gp-apartment/plain/1.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/2-2.jpg",
+      "plain": "/images/projects/gp-apartment/plain/2-2.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/2-3.jpg",
+      "plain": "/images/projects/gp-apartment/plain/2-3.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/3.jpg",
+      "plain": "/images/projects/gp-apartment/plain/3.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/4.jpg",
+      "plain": "/images/projects/gp-apartment/plain/4.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/5.jpg",
+      "plain": "/images/projects/gp-apartment/plain/5.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/6.jpg",
+      "plain": "/images/projects/gp-apartment/plain/6.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/7.jpg",
+      "plain": "/images/projects/gp-apartment/plain/7.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/8.jpg",
+      "plain": "/images/projects/gp-apartment/plain/8.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/9.jpg",
+      "plain": "/images/projects/gp-apartment/plain/9.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/10.jpg",
+      "plain": "/images/projects/gp-apartment/plain/10.jpg",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/gp-apartment/11.jpg",
+      "plain": "/images/projects/gp-apartment/plain/11.jpg",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/projects/gp-apartment/12.jpg",
+      "plain": "/images/projects/gp-apartment/plain/12.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/13.jpg",
+      "plain": "/images/projects/gp-apartment/plain/13.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/14.jpg",
+      "plain": "/images/projects/gp-apartment/plain/14.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/15.jpg",
+      "plain": "/images/projects/gp-apartment/plain/15.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/16.jpg",
+      "plain": "/images/projects/gp-apartment/plain/16.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/17.jpg",
+      "plain": "/images/projects/gp-apartment/plain/17.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/18.jpg",
+      "plain": "/images/projects/gp-apartment/plain/18.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/19.jpg",
+      "plain": "/images/projects/gp-apartment/plain/19.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/20.jpg",
+      "plain": "/images/projects/gp-apartment/plain/20.jpg",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/gp-apartment/21.jpg",
+      "plain": "/images/projects/gp-apartment/plain/21.jpg",
+      "width": 1600,
+      "height": 2400
+    }
+  ],
+  "js-kids-room": [
+    {
+      "src": "/images/projects/js-kids-room/1j.jpg",
+      "plain": "/images/projects/js-kids-room/plain/1j.jpg",
+      "width": 2000,
+      "height": 1500
+    },
+    {
+      "src": "/images/projects/js-kids-room/2j.jpg",
+      "plain": "/images/projects/js-kids-room/plain/2j.jpg",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "src": "/images/projects/js-kids-room/3j.jpg",
+      "plain": "/images/projects/js-kids-room/plain/3j.jpg",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "src": "/images/projects/js-kids-room/4j.jpg",
+      "plain": "/images/projects/js-kids-room/plain/4j.jpg",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "src": "/images/projects/js-kids-room/5j.jpg",
+      "plain": "/images/projects/js-kids-room/plain/5j.jpg",
+      "width": 1500,
+      "height": 2000
+    },
+    {
+      "src": "/images/projects/js-kids-room/6j.jpg",
+      "plain": "/images/projects/js-kids-room/plain/6j.jpg",
+      "width": 1196,
+      "height": 788
+    }
+  ],
+  "kei-apartment": [
+    {
+      "src": "/images/projects/kei-apartment/1kei.jpg",
+      "plain": "/images/projects/kei-apartment/plain/1kei.jpg",
+      "width": 2372,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/kei-apartment/2kei.jpg",
+      "plain": "/images/projects/kei-apartment/plain/2kei.jpg",
+      "width": 2372,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/kei-apartment/3kei.jpg",
+      "plain": "/images/projects/kei-apartment/plain/3kei.jpg",
+      "width": 2372,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/kei-apartment/4kei.jpg",
+      "plain": "/images/projects/kei-apartment/plain/4kei.jpg",
+      "width": 2372,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/kei-apartment/5kei.jpg",
+      "plain": "/images/projects/kei-apartment/plain/5kei.jpg",
+      "width": 2120,
+      "height": 2400
+    }
+  ],
+  "mds-apartment": [
+    {
+      "src": "/images/projects/mds-apartment/1mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/1mds.jpg",
+      "width": 1500,
+      "height": 1700
+    },
+    {
+      "src": "/images/projects/mds-apartment/2mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/2mds.jpg",
+      "width": 1500,
+      "height": 1700
+    },
+    {
+      "src": "/images/projects/mds-apartment/3mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/3mds.jpg",
+      "width": 1800,
+      "height": 1250
+    },
+    {
+      "src": "/images/projects/mds-apartment/4mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/4mds.jpg",
+      "width": 1000,
+      "height": 1200
+    },
+    {
+      "src": "/images/projects/mds-apartment/5mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/5mds.jpg",
+      "width": 1000,
+      "height": 1250
+    },
+    {
+      "src": "/images/projects/mds-apartment/6mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/6mds.jpg",
+      "width": 1250,
+      "height": 1250
+    },
+    {
+      "src": "/images/projects/mds-apartment/7mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/7mds.jpg",
+      "width": 1000,
+      "height": 1200
+    },
+    {
+      "src": "/images/projects/mds-apartment/8mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/8mds.jpg",
+      "width": 2000,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/mds-apartment/9mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/9mds.jpg",
+      "width": 1000,
+      "height": 1200
+    },
+    {
+      "src": "/images/projects/mds-apartment/10mds.jpg",
+      "plain": "/images/projects/mds-apartment/plain/10mds.jpg",
+      "width": 1000,
+      "height": 1200
+    }
+  ],
+  "spk-apartment": [
+    {
+      "src": "/images/projects/spk-apartment/1sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/1sp.jpg",
+      "width": 2400,
+      "height": 1778
+    },
+    {
+      "src": "/images/projects/spk-apartment/2sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/2sp.jpg",
+      "width": 2400,
+      "height": 1778
+    },
+    {
+      "src": "/images/projects/spk-apartment/3sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/3sp.jpg",
+      "width": 2400,
+      "height": 1778
+    },
+    {
+      "src": "/images/projects/spk-apartment/4sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/4sp.jpg",
+      "width": 2400,
+      "height": 1778
+    },
+    {
+      "src": "/images/projects/spk-apartment/5sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/5sp.jpg",
+      "width": 2400,
+      "height": 1778
+    },
+    {
+      "src": "/images/projects/spk-apartment/6sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/6sp.jpg",
+      "width": 2400,
+      "height": 1920
+    },
+    {
+      "src": "/images/projects/spk-apartment/7sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/7sp.jpg",
+      "width": 1920,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/spk-apartment/8sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/8sp.jpg",
+      "width": 2400,
+      "height": 1714
+    },
+    {
+      "src": "/images/projects/spk-apartment/9sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/9sp.jpg",
+      "width": 1714,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/spk-apartment/10sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/10sp.jpg",
+      "width": 2400,
+      "height": 1714
+    },
+    {
+      "src": "/images/projects/spk-apartment/11sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/11sp.jpg",
+      "width": 1714,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/spk-apartment/12sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/12sp.jpg",
+      "width": 1728,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/spk-apartment/13sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/13sp.jpg",
+      "width": 1728,
+      "height": 2400
+    },
+    {
+      "src": "/images/projects/spk-apartment/14sp.jpg",
+      "plain": "/images/projects/spk-apartment/plain/14sp.jpg",
+      "width": 1728,
+      "height": 2400
+    }
+  ],
+  "sv-weekend-house": [
+    {
+      "src": "/images/projects/sv-weekend-house/1.jpg",
+      "plain": "/images/projects/sv-weekend-house/plain/1.jpg",
+      "width": 1577,
+      "height": 1256
+    },
+    {
+      "src": "/images/projects/sv-weekend-house/2.jpg",
+      "plain": "/images/projects/sv-weekend-house/plain/2.jpg",
+      "width": 1376,
+      "height": 1104
+    },
+    {
+      "src": "/images/projects/sv-weekend-house/3.jpg",
+      "plain": "/images/projects/sv-weekend-house/plain/3.jpg",
+      "width": 1577,
+      "height": 1256
+    },
+    {
+      "src": "/images/projects/sv-weekend-house/4.jpg",
+      "plain": "/images/projects/sv-weekend-house/plain/4.jpg",
+      "width": 2400,
+      "height": 2213
+    }
+  ]
+}

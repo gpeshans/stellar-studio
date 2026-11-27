@@ -4,19 +4,20 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { PROJECTS } from "@/lib/data";
+import { getProject } from "@/lib/data";
 import { padIndex } from "@/lib/utils";
 
-const HEROES = [
-  { img: PROJECTS[0].img, project: PROJECTS[0] },
-  { img: PROJECTS[3].img, project: PROJECTS[3] },
-  { img: PROJECTS[1].img, project: PROJECTS[1] },
-];
+// The projects the home page opens with, in order.
+const HEROES = ["gia-house", "sv-weekend-house", "brash-fashion"].flatMap((slug) => {
+  const project = getProject(slug);
+  return project ? [project] : [];
+});
 
 export default function Hero() {
   const [idx, setIdx] = useState(0);
   const tc = useTranslations("common");
   const tp = useTranslations("data.projects");
+  const tt = useTranslations("projectTypes");
 
   const advance = useCallback(() => {
     setIdx((i) => (i + 1) % HEROES.length);
@@ -27,7 +28,7 @@ export default function Hero() {
     return () => clearInterval(t);
   }, [advance]);
 
-  const { project } = HEROES[idx];
+  const project = HEROES[idx];
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
@@ -40,8 +41,8 @@ export default function Hero() {
             style={{ opacity: i === idx ? 1 : 0 }}
           >
             <Image
-              src={h.img}
-              alt={tp(`${h.project.slug}.title`)}
+              src={h.cover.plain}
+              alt={tp(`${h.slug}.title`)}
               fill
               className="object-cover brightness-[0.65]"
               style={{
@@ -79,7 +80,7 @@ export default function Hero() {
           className="font-body text-sm font-light tracking-[0.03em] opacity-50 mt-3.5 mb-9 animate-fade-up"
           style={{ animationDelay: "0.08s" }}
         >
-          {tp(`${project.slug}.location`)} — {tp(`${project.slug}.category`)}
+          {tp(`${project.slug}.location`)} — {tt(project.type)}
         </p>
 
         <div className="flex items-center gap-8">
@@ -111,7 +112,7 @@ export default function Hero() {
                   aria-selected={i === idx}
                   aria-label={tc("slide", {
                     num: i + 1,
-                    title: tp(`${h.project.slug}.title`),
+                    title: tp(`${h.slug}.title`),
                   })}
                 />
               );

@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { PROJECTS } from "@/lib/data";
-import { getNextProject } from "@/lib/utils";
+import { PROJECTS, getProject, nextProject } from "@/lib/data";
 import { breadcrumbJsonLd, projectJsonLd } from "@/lib/metadata";
-import ProjectDetailHero from "@/components/ProjectDetailHero";
-import ProjectMeta from "@/components/ProjectMeta";
-import ProjectGallery from "@/components/ProjectGallery";
+import ProjectView from "@/components/ProjectView";
+import ProjectInfo from "@/components/ProjectInfo";
 import NextProjectCTA from "@/components/NextProjectCTA";
 
 interface PageProps {
@@ -24,19 +22,20 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const project = PROJECTS.find((p) => p.slug === slug);
+  const project = getProject(slug);
   if (!project) return {};
 
   const t = await getTranslations({ locale, namespace: "data.projects" });
-  const description = t(`${project.slug}.description`);
-
+  const title = t(`${slug}.title`);
+  const description = t(`${slug}.description`);
   return {
-    title: t(`${project.slug}.title`),
+    title,
     description,
     openGraph: {
-      title: `${t(`${project.slug}.title`)} | Stellar Architecture Studio`,
+      title: `${title} | Stellar Architecture Studio`,
       description,
-      images: [{ url: project.img, width: 1200, height: 800 }],
+      // The plain cover: link previews crop it, which would cut the watermark.
+      images: [{ url: project.cover.plain }],
     },
   };
 }
@@ -45,25 +44,31 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const project = PROJECTS.find((p) => p.slug === slug);
+  const project = getProject(slug);
   if (!project) notFound();
 
-  const nextProject = getNextProject(PROJECTS, slug);
-
   const t = await getTranslations("data.projects");
+  const tt = await getTranslations("projectTypes");
+  const title = t(`${slug}.title`);
 
   return (
     <div className="pt-16">
-      <ProjectDetailHero image={project.gallery[0]} title={t(`${project.slug}.title`)} />
-      <ProjectMeta project={project} />
-
-      <ProjectGallery gallery={project.gallery} title={t(`${project.slug}.title`)} />
-      <NextProjectCTA project={nextProject} />
+      <ProjectView title={title} images={project.images}>
+        <ProjectInfo project={project} />
+      </ProjectView>
+      <NextProjectCTA project={nextProject(slug)} />
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(projectJsonLd(project, locale, t(`${project.slug}.description`))),
+          __html: JSON.stringify(
+            projectJsonLd(project, locale, {
+              title,
+              description: t(`${slug}.description`),
+              type: tt(project.type),
+              location: t.has(`${slug}.location`) ? t(`${slug}.location`) : undefined,
+            })
+          ),
         }}
       />
       <script
@@ -73,7 +78,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             breadcrumbJsonLd(locale, [
               { name: "Home", url: "/" },
               { name: "Projects", url: "/projects" },
-              { name: t(`${project.slug}.title`), url: `/projects/${project.slug}` },
+              { name: title, url: `/projects/${slug}` },
             ])
           ),
         }}

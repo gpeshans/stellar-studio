@@ -9,9 +9,11 @@ interface ProjectCardProps {
   index: number;
 }
 
+/** A project in the home page mosaic, with its name over the image. */
 export default function ProjectCard({ project, ratio, index }: ProjectCardProps) {
   const tp = useTranslations("data.projects");
-  const tc = useTranslations("categories");
+  const tt = useTranslations("projectTypes");
+  const location = tp.has(`${project.slug}.location`) ? tp(`${project.slug}.location`) : null;
 
   return (
     <Link
@@ -21,7 +23,7 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
     >
       <div className="relative overflow-hidden bg-bg2" style={{ aspectRatio: ratio }}>
         <Image
-          src={project.img}
+          src={project.cover.plain}
           alt={tp(`${project.slug}.title`)}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
@@ -33,14 +35,15 @@ export default function ProjectCard({ project, ratio, index }: ProjectCardProps)
         style={{ padding: "clamp(16px, 2.5vw, 36px)", transitionTimingFunction: "var(--ease-smooth)" }}
       >
         <p className="font-body text-xs font-medium tracking-[0.15em] uppercase opacity-50 mb-2">
-          {tc(project.category)} — {project.year}
+          {tt(project.type)}
+          {project.year && ` — ${project.year}`}
         </p>
         <h3 className="font-display text-[clamp(18px,2.2vw,30px)] font-medium tracking-tight mb-1.5">
           {tp(`${project.slug}.title`)}
         </h3>
-        <p className="font-body text-sm font-light opacity-60">
-          {tp(`${project.slug}.location`)}
-        </p>
+        {location && (
+          <p className="font-body text-sm font-light opacity-60">{location}</p>
+        )}
       </div>
     </Link>
   );

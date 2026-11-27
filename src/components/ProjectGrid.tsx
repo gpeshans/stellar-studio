@@ -77,7 +77,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
         {projects.map((project, i) => {
           const pattern = patterns[i];
           return (
-            <div key={project.id} className={pattern.col}>
+            <div key={project.slug} className={pattern.col}>
               <ProjectCard project={project} ratio={pattern.ratio} index={i} />
             </div>
           );

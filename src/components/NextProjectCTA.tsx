@@ -10,6 +10,7 @@ interface NextProjectCTAProps {
 export default function NextProjectCTA({ project }: NextProjectCTAProps) {
   const t = useTranslations("project");
   const tp = useTranslations("data.projects");
+  const location = tp.has(`${project.slug}.location`) ? tp(`${project.slug}.location`) : null;
 
   return (
     <Link
@@ -17,7 +18,7 @@ export default function NextProjectCTA({ project }: NextProjectCTAProps) {
       className="group relative block h-[50vh] overflow-hidden"
     >
       <Image
-        src={project.img}
+        src={project.cover.plain}
         alt={tp(`${project.slug}.title`)}
         fill
         className="object-cover brightness-50 transition-transform duration-700 group-hover:scale-[1.03]"
@@ -31,9 +32,9 @@ export default function NextProjectCTA({ project }: NextProjectCTAProps) {
         <h2 className="font-display text-[clamp(28px,5vw,52px)] font-medium tracking-tight">
           {tp(`${project.slug}.title`)}
         </h2>
-        <p className="font-body text-sm font-light opacity-50 mt-2">
-          {tp(`${project.slug}.location`)}
-        </p>
+        {location && (
+          <p className="font-body text-sm font-light opacity-50 mt-2">{location}</p>
+        )}
       </div>
     </Link>
   );

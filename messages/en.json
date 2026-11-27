@@ -49,10 +49,9 @@
   },
   "projects": {
     "label": "Portfolio",
-    "title": "All Projects",
-    "sub": "Browse our complete body of work by category.",
-    "showAll": "Show All",
-    "projectCount": "{count, plural, one {# project} other {# projects}}"
+    "title": "Projects",
+    "sub": "A selection of the houses, apartments and commercial spaces we have designed.",
+    "filterLabel": "Filter projects"
   },
   "project": {
     "allProjects": "\u2190 All Projects",
@@ -61,7 +60,11 @@
     "year": "Year",
     "area": "Area",
     "category": "Category",
-    "client": "Client"
+    "client": "Client",
+    "similarHeading": "Planning something similar?",
+    "requestQuote": "Request a quote",
+    "imageAlt": "{title}, image {number}",
+    "openImage": "Open image {number} of {count} full screen"
   },
   "services": {
     "label": "Expertise",
@@ -283,10 +286,17 @@
     "text": "STELLAR \u2014 ARCHITECTURE \u2014 DESIGN \u2014 SPACE \u2014 FORM \u2014 LIGHT \u2014 "
   },
   "categories": {
-    "All": "All Projects",
-    "Residential": "Residential",
-    "Commercial": "Commercial",
-    "Interior": "Interior"
+    "all": "All",
+    "architecture": "Architecture",
+    "interiors": "Interiors"
+  },
+  "projectTypes": {
+    "house": "House",
+    "weekendHouse": "Weekend house",
+    "petrolStation": "Petrol station",
+    "boutique": "Boutique",
+    "apartment": "Apartment",
+    "kidsRoom": "Kids' room"
   },
   "stats": {
     "established": "Established",
@@ -299,7 +309,7 @@
     "titleTemplate": "{title} | Stellar Architecture Studio",
     "description": "Architecture and interior design studio based in Skopje, Macedonia. Residential, commercial, and cultural projects designed with meticulous attention to context, materiality, and light.",
     "projectsTitle": "Projects",
-    "projectsDesc": "Browse our complete portfolio of architectural projects \u2014 residential, commercial, cultural, interior, and public spaces across Macedonia.",
+    "projectsDesc": "Architecture and interior projects by Stellar Architecture Studio in Skopje: houses, apartments, children's rooms and commercial spaces in North Macedonia.",
     "servicesTitle": "Services",
     "servicesDesc": "Architecture for houses, residential and commercial buildings, interiors from design to turnkey, focused consultations and interior glow-ups. Every project is led personally by Brankica, founder of Stellar.",
     "studioTitle": "Studio",
@@ -313,29 +323,53 @@
         "title": "GIA House",
         "description": "A modern residential house in Berovo, North Macedonia, designed with a focus on natural light and open spaces. The building features a clean, minimalist aesthetic with large windows and a seamless integration of indoor and outdoor living.",
         "location": "Berovo, North Macedonia",
-        "category": "Residential",
         "client": "Private"
       },
       "brash-fashion": {
         "title": "Brash Fashion",
         "description": "A contemporary fashion boutique designed around clarity, symmetry, and refined minimalism. The space features a clean grid layout with central display islands and perimeter shelving, creating intuitive circulation and strong visual balance. Neutral tones, soft integrated lighting, and natural wood accents highlight the merchandise while maintaining a calm, gallery-like atmosphere. The result is a modern retail environment that enhances product visibility and elevates the shopping experience.",
         "location": "Shtip, North Macedonia",
-        "category": "Commercial",
         "client": "Brash Fashion"
       },
       "alb-petrol": {
         "title": "ALB Petrol",
         "description": "Modern petrol station facade defined by clean geometry, a bold cantilevered canopy, and integrated LED lighting for strong day-night visibility. A restrained palette and transparent storefront create a clear, durable, and recognizable architectural identity.",
         "location": "Tetovo, North Macedonia",
-        "category": "Commercial",
         "client": "ALB Petrol"
       },
       "sv-weekend-house": {
         "title": "SV Weekend House",
         "description": "A weekend house located in the serene countryside of Suvi Laki, North Macedonia. The design emphasizes a strong connection to nature, with large windows framing picturesque views and a spacious deck that extends into the landscape. The interior features a warm, minimalist aesthetic with natural materials and an open floor plan that encourages relaxation and socializing.",
         "location": "Suvi Laki, North Macedonia",
-        "category": "Residential",
         "client": "Private"
+      },
+      "gp-apartment": {
+        "title": "GP Apartment",
+        "description": "A finished apartment, photographed after completion. Navy velvet and warm oak stand out against matte black: a slatted black screen frames the living room, the kitchen pairs black cabinets with an oak-clad island, and full-height white wardrobes disappear into the walls. The bedrooms continue with herringbone oak headboards and a walk-in wardrobe behind curtains."
+      },
+      "spk-apartment": {
+        "title": "SPK Apartment",
+        "description": "A calm family apartment in white, oak and soft sage. In the living room a sliding panel hides the TV in an oak wall, and white shelving runs up to the ceiling. The kitchen continues in sage green around a round oak table. In the children's room the bed sits in a house-shaped niche next to a built-in desk, and the bathrooms are finished in terrazzo with black-framed glass."
+      },
+      "mds-apartment": {
+        "title": "MDS Apartment",
+        "description": "A warm, modern apartment on a herringbone oak floor. A teal sofa and round nesting tables set the tone in the living room, and the dining corner gathers around a round table under a black pendant. Walnut links the lit drinks cabinet, the kitchen and the entrance bench, while the bedroom pairs an upholstered grey headboard with full-height wardrobes and a small desk."
+      },
+      "ae-kids-room": {
+        "title": "AE Kids' Room",
+        "description": "A children's room in white, light oak and mustard yellow. The bed sits in a built-in cabin with a scalloped, upholstered headboard and soft lighting, reached by steps that double as storage. Wardrobes with round yellow handles line the wall, and the desk under the window has its own yellow bookshelf."
+      },
+      "dkk-apartment": {
+        "title": "DKK Apartment",
+        "description": "A bright apartment in soft grey, white and light oak. The living room opens onto the dining table, with open oak shelving and a floating TV cabinet keeping the walls light. In the children's room the bed, storage steps and wardrobe form a single dusty-pink unit, and the entrance hall pairs a full-height mirror with a bench and built-in wardrobes."
+      },
+      "js-kids-room": {
+        "title": "JS Kids' Room",
+        "description": "A shared room for two children. A built-in bunk bed with storage steps and mint drawers keeps the floor free for play, while a mountain mural with forest animals and a house-shaped play kitchen set the mood. A desk by the window and full-height wardrobes complete the room, and the cut-away drawing shows how it all fits together."
+      },
+      "kei-apartment": {
+        "title": "KEI Apartment",
+        "description": "A calm bedroom in white, oak and soft grey. Wardrobes wrap around the bed, which sits in an oak-lined niche with built-in reading lights, so storage never crowds the room. A slim white dressing table with an arched mirror stands by the window, and a walk-in wardrobe keeps everything else out of sight."
       }
     },
     "services": {
