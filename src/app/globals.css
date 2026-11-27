@@ -63,10 +63,13 @@
 
   ::selection { background: black; color: white; }
 
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: white; }
-  ::-webkit-scrollbar-thumb { background: #cccccc; border-radius: 2px; }
-  ::-webkit-scrollbar-thumb:hover { background: #999999; }
+  /* On computers the browser's scrollbar keeps a strip down the right side,
+     even when transparent, so it's hidden and ScrollIndicator shows a thin bar
+     while the page scrolls. Touch screens keep theirs, which already does. */
+  @media (pointer: fine) {
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; } /* Safari before 18.2 */
+  }
 
   img { user-select: none; -webkit-user-drag: none; }
 

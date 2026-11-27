@@ -10,6 +10,7 @@ import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import { organizationJsonLd, SITE_URL } from "@/lib/metadata";
 import "../globals.css";
 
@@ -109,6 +110,7 @@ export default async function LocaleLayout({
           <main id="main-content">{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <ScrollIndicator />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
