@@ -6,9 +6,14 @@ import type { Collaborator } from "@/lib/types";
 // the same height: long wordmarks sit lower, compact marks taller.
 const LOGO_AREA = 5600; // px², e.g. 150 × 37
 
+// The page's CSS sets img height to auto, so the browser works the height out
+// from the width and the file's own proportions. Taking the height from the
+// rounded width the same way makes it land on the same pixel; otherwise Next
+// warns that the height was changed.
 function logoSize({ width, height, scale = 1 }: Collaborator["logo"]) {
   const h = Math.sqrt((LOGO_AREA * height) / width) * scale;
-  return { width: Math.round((h * width) / height), height: Math.round(h) };
+  const w = Math.round((h * width) / height);
+  return { width: w, height: Math.round((w * height) / width) };
 }
 
 /** The firms we work with, as a wall of black logos linking to their sites. */
@@ -25,11 +30,14 @@ export default function CollaboratorGrid() {
               rel="noopener noreferrer"
               className="group relative flex items-center justify-center h-[clamp(128px,13vw,184px)] px-8 hover:bg-bg2 transition-colors duration-400"
             >
+              {/* Served as they are: they're tiny, and a resized copy's
+                  proportions drift by a fraction, enough to shift the height. */}
               <Image
                 src={logo.src}
                 alt={name}
                 width={size.width}
                 height={size.height}
+                unoptimized
                 className="opacity-60 group-hover:opacity-100 transition-opacity duration-400"
               />
               <span
